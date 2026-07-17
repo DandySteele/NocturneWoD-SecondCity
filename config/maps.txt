@@ -74,3 +74,6 @@ endmap
 
 map runtimestation
 endmap
+
+map runtimestation_minimal
+endmap
