@@ -3,27 +3,19 @@
 /datum/bodypart_overlay
 	/// Sometimes we need multiple layers, for like the back, middle and front of the person (EXTERNAL_FRONT, EXTERNAL_ADJACENT, EXTERNAL_BEHIND)
 	var/layers
-	/* // NOCTURNE REMOVAL START
 	/// List of all possible layers to their real layer. Used for looping through in drawing
 	var/static/alist/all_layers = alist(
 		EXTERNAL_FRONT = -BODY_FRONT_LAYER,
 		EXTERNAL_ADJACENT = -BODY_ADJ_LAYER,
 		EXTERNAL_BEHIND = -BODY_BEHIND_LAYER,
+		// NOCTURNE ADDITION START
+		EXTERNAL_ADJACENT_2 = -BODY_ADJ_LAYER_2,
+		EXTERNAL_ADJACENT_3 = -BODY_ADJ_LAYER_3,
+		EXTERNAL_BEHIND = -BODY_BEHIND_LAYER,
+		EXTERNAL_HAND = -BODY_HAND_LAYER,
+		EXTERNAL_BODY_FRONT_UNDER_CLOTHES = -BODY_FRONT_UNDER_CLOTHES_LAYER,
+		// NOCTURNE ADDITION END
 	)
-	*/ // NOCTURNE REMOVAL END
-
-	// NOCTURNE ADDITION START
-	/// List of all possible layers. Used for looping through in drawing
-	var/static/list/all_layers = list(
-		EXTERNAL_FRONT,
-		EXTERNAL_ADJACENT,
-		EXTERNAL_ADJACENT_2,
-		EXTERNAL_ADJACENT_3,
-		EXTERNAL_BEHIND,
-		EXTERNAL_HAND,
-		EXTERNAL_BODY_FRONT_UNDER_CLOTHES,
-	)
-	// NOCTURNE ADDITION END
 
 	/// Key of the icon states of all the sprite_datums for easy caching
 	var/cache_key = ""

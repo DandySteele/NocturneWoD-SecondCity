@@ -54,7 +54,6 @@
 
 		target_human.dna.update_uf_block(/datum/dna_block/feature/mutant_color)
 		target_human.update_body(is_creating = TRUE)
-		target_human.update_mutations_overlay()
 
 		visible_message(span_notice("[user] finishes painting [target_human]!"))
 
