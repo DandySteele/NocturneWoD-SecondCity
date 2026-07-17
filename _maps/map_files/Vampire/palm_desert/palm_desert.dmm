@@ -3299,7 +3299,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/sewer)
 "dUx" = (
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/anarch)
 "dUz" = (
@@ -17506,10 +17506,6 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
-"tBN" = (
-/obj/effect/landmark/start/darkpack/citizen/graveyardkeeper,
-/turf/open/floor/plating/asphalt,
-/area/vtm/graveyard)
 "tCo" = (
 /obj/structure/stone_tile/surrounding_tile{
 	dir = 1
@@ -64856,7 +64852,7 @@ ncp
 ozT
 ayt
 ayt
-tBN
+gUo
 gUo
 rrR
 eGg
