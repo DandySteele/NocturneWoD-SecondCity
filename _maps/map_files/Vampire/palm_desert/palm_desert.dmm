@@ -7104,12 +7104,12 @@
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/millennium)
 "iji" = (
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = 41
+/obj/machinery/light/directional/north,
+/obj/machinery/computer/cargo/express{
+	landingzone = /area/vtm/palm_desert/outside/supply
 	},
 /turf/open/floor/plating/concrete,
-/area/vtm/palm_desert/interior/supply)
+/area/vtm/palm_desert/outside/supply)
 "ijZ" = (
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -11042,13 +11042,6 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/palm_desert/interior/millennium)
-"mxb" = (
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = 42
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/palm_desert/interior/supply)
 "mxg" = (
 /obj/structure/chair/sofa/middle/brown{
 	dir = 4
@@ -18039,13 +18032,6 @@
 /obj/item/stack/sheet/mineral/diamond,
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/giovanni)
-"udH" = (
-/obj/machinery/computer/cargo/express{
-	dir = 4;
-	landingzone = /area/vtm/palm_desert/outside/supply
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/palm_desert/interior/supply)
 "uex" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk/poor,
@@ -59033,9 +59019,9 @@ jie
 jie
 rpx
 rpx
-iji
-iji
-iji
+jie
+jie
+jie
 rpx
 rpx
 ahR
@@ -59179,9 +59165,9 @@ asu
 gYM
 rpx
 rpx
-mxb
-mxb
-mxb
+jie
+jie
+jie
 rpx
 rpx
 mRp
@@ -60704,7 +60690,7 @@ rpx
 rpx
 rpx
 rpx
-lVV
+iji
 mRp
 lUn
 mRp
@@ -60854,7 +60840,7 @@ sNV
 jie
 jie
 fpX
-udH
+jie
 ndq
 mRp
 cPw
