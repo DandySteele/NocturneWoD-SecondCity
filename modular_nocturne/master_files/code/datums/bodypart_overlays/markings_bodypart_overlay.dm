@@ -15,3 +15,13 @@
 	if(ishand)
 		zonestring = limb.aux_zone
 	return image(icon, icon_state + "_" + zonestring + gender_string, layer = layer)
+
+/datum/bodypart_overlay/simple/body_marking/body_markings/icon_render_key(obj/item/bodypart/limb)
+	. = ..()
+
+	var/zonestring = limb.body_zone
+	if(limb.bodyshape & BODYSHAPE_DIGITIGRADE)
+		zonestring = limb.body_zone + "_d"
+	if(ishand)
+		zonestring = limb.aux_zone
+	. += zonestring
