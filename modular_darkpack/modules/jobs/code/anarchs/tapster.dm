@@ -9,7 +9,6 @@
 	outfit = /datum/outfit/job/vampire/tapster
 
 	display_order = JOB_DISPLAY_ORDER_TAPSTER
-	department_for_prefs = /datum/job_department/anarch
 	departments_list = list(
 		/datum/job_department/anarch,
 		/datum/job_department/city_services, // NOCTURNE EDIT
@@ -33,7 +32,7 @@
 	*/
 	// NOCTURNE REMOVAL END
 	description = "You are a bartender of the local biker hangout. Serve the eclectic clients that pass through, and try not to ask too many questions."
-	minimal_masquerade = 0
+	minimum_masquerade = 0
 
 /datum/outfit/job/vampire/tapster
 	name = "Tapster"
