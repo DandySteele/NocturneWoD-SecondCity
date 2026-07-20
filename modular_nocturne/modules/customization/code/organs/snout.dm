@@ -5,7 +5,10 @@
 	dna_block = /datum/dna_block/feature/accessory/snout_nocturne
 
 /datum/bodypart_overlay/mutant/snout/mutant
-	layers = EXTERNAL_FRONT | EXTERNAL_ADJACENT
+	layers = list(
+		EXTERNAL_FRONT = BODY_FRONT_LAYER,
+		EXTERNAL_ADJACENT = BODY_ADJ_LAYER,
+	)
 	feature_key = FEATURE_SNOUT_NOCTURNE
 	feature_key_sprite = FEATURE_SNOUT
 

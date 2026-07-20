@@ -33,7 +33,10 @@
 
 /datum/bodypart_overlay/mutant/genital/pintle
 	feature_key = FEATURE_PINTLE_NOCTURNE
-	layers = EXTERNAL_FRONT | EXTERNAL_BEHIND
+	layers = list(
+		EXTERNAL_FRONT = BODY_FRONT_LAYER,
+		EXTERNAL_BEHIND = BODY_BEHIND_LAYER,
+	)
 	feature_key_sprite = "pintle"
 
 	organ_slot = ORGAN_SLOT_EXTERNAL_PINTLE

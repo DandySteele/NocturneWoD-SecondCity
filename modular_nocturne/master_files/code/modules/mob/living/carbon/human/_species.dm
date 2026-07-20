@@ -33,10 +33,10 @@
 	var/handlayer = FALSE
 	bodypart = marking_zones(bodypart)
 	if(bodypart == BODY_ZONE_PRECISE_L_HAND)
-		handlayer = EXTERNAL_HAND
+		handlayer = TRUE
 		bodypart = BODY_ZONE_L_ARM
 	else if(bodypart == BODY_ZONE_PRECISE_R_HAND)
-		handlayer = EXTERNAL_HAND
+		handlayer = TRUE
 		bodypart = BODY_ZONE_R_ARM
 	var/obj/item/bodypart/people_part =  target.get_bodypart(bodypart)
 	if(people_part)
@@ -50,7 +50,6 @@
 		overlay.icon_state = accessory.icon_state
 		if(handlayer)
 			overlay.ishand = TRUE
-			overlay.layers = handlayer
 		if(bodypart == BODY_ZONE_HEAD)
 			overlay.use_gender = FALSE
 		else

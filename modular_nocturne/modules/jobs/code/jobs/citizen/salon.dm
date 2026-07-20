@@ -13,7 +13,7 @@
 		/datum/job_department/city_services,
 	)
 	display_order = JOB_DISPLAY_ORDER_SALON
-	minimal_masquerade = 0
+	minimum_masquerade = 0
 
 /datum/outfit/job/vampire/salon
 	name = "Salon Worker"

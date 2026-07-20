@@ -18,7 +18,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_CAMARILLA
 	department_head = /datum/job/vampire/prince
 	department_experience_type = EXP_TYPE_CAMARILLA
-	display_order = 1
+	display_order = DEPARTMENT_DISPLAY_ORDER_CAMARILLA // NOCTURNE EDIT - ORIGINAL: display_order = 1
 	ui_color = "#6681a5"
 
 /datum/job_department/church
@@ -26,7 +26,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_CHURCH
 	department_head = /datum/job/vampire/primogen_lasombra
 	department_experience_type = EXP_TYPE_CHURCH
-	display_order = 2
+	display_order = DEPARTMENT_DISPLAY_ORDER_CHURCH // NOCTURNE EDIT - ORIGINAL: display_order = 2
 	ui_color = "#8c66a5"
 
 /datum/job_department/clinic
@@ -34,7 +34,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_CLINIC
 	department_head = /datum/job/vampire/primogen_malkavian
 	department_experience_type = EXP_TYPE_CLINIC
-	display_order = 3
+	display_order = DEPARTMENT_DISPLAY_ORDER_CLINIC // NOCTURNE EDIT - ORIGINAL: display_order = 3
 	ui_color = "#6681a5"
 
 /datum/job_department/strip_club
@@ -42,7 +42,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_STRIP_CLUB
 	department_head = /datum/job/vampire/primogen_toreador
 	department_experience_type = EXP_TYPE_CLUB
-	display_order = 4
+	display_order = DEPARTMENT_DISPLAY_ORDER_STRIP_CLUB // NOCTURNE EDIT - ORIGINAL: display_order = 4
 	ui_color = "#a566a5ff"
 
 // Anarch
@@ -51,7 +51,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_ANARCH
 	department_head = /datum/job/vampire/baron
 	department_experience_type = EXP_TYPE_ANARCH
-	display_order = 5
+	display_order = DEPARTMENT_DISPLAY_ORDER_ANARCH // NOCTURNE EDIT - ORIGINAL: display_order = 5
 	ui_color = "#a56666"
 
 // Antuk or whatever
@@ -60,7 +60,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_GIOVANNI
 	department_head = /datum/job/vampire/capo
 	department_experience_type = EXP_TYPE_GIOVANNI
-	display_order = 6
+	display_order = DEPARTMENT_DISPLAY_ORDER_GIOVANNI // NOCTURNE EDIT - ORIGINAL: display_order = 6
 	ui_color = "#66a569ff"
 
 /datum/job_department/chantry
@@ -68,7 +68,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_CHANTRY
 	department_head = /datum/job/vampire/regent
 	department_experience_type = EXP_TYPE_CHANTRY
-	display_order = 7
+	display_order = DEPARTMENT_DISPLAY_ORDER_CHANTRY // NOCTURNE EDIT - ORIGINAL: display_order = 7
 	ui_color = "#a56666ff"
 
 /datum/job_department/manor
@@ -76,7 +76,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_MANOR
 	department_head = /datum/job/vampire/voivode
 	department_experience_type = EXP_TYPE_MANOR
-	display_order = 8
+	display_order = DEPARTMENT_DISPLAY_ORDER_MANOR // NOCTURNE EDIT - ORIGINAL: display_order = 8
 	ui_color = "#a066a5ff"
 
 // Antag*
@@ -85,7 +85,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_SABBAT
 	department_head = /datum/job/vampire/sabbatductus
 	department_experience_type = EXP_TYPE_SABBAT
-	display_order = 9
+	display_order = DEPARTMENT_DISPLAY_ORDER_SABBAT // NOCTURNE EDIT - ORIGINAL: display_order = 9
 	ui_color = "#4e4e4eff"
 
 // Fera
@@ -94,7 +94,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_GAIA
 	department_head = /datum/job/vampire/councillor
 	department_experience_type = EXP_TYPE_GAIA
-	display_order = 10
+	display_order = DEPARTMENT_DISPLAY_ORDER_GAIA // NOCTURNE EDIT - ORIGINAL: display_order = 10
 	ui_color = "#b4bd64"
 
 // Antag*
@@ -103,7 +103,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_PENTEX
 	department_head = /datum/job/vampire/branch_lead
 	department_experience_type = EXP_TYPE_SPIRAL
-	display_order = 11
+	display_order = DEPARTMENT_DISPLAY_ORDER_PENTEX // NOCTURNE EDIT - ORIGINAL: display_order = 11
 	ui_color = COLOR_CORP_ENDRON
 
 /datum/job_department/supply
@@ -111,7 +111,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_SUPPLY
 	department_head = /datum/job/vampire/dealer
 	department_experience_type = EXP_TYPE_WAREHOUSE
-	display_order = 12
+	display_order = DEPARTMENT_DISPLAY_ORDER_SUPPLY // NOCTURNE EDIT - ORIGINAL: display_order = 12
 	ui_color = "#a58866"
 
 // Humans
@@ -120,13 +120,13 @@
 	department_bitflags = DEPARTMENT_BITFLAG_POLICE
 	department_head = /datum/job/vampire/police_captain
 	department_experience_type = EXP_TYPE_POLICE
-	display_order = 13
+	display_order = DEPARTMENT_DISPLAY_ORDER_POLICE // NOCTURNE EDIT - ORIGINAL: display_order = 13
 	ui_color = "#6a6288ff"
 
 /datum/job_department/city_services
 	department_name = DEPARTMENT_CITY_SERVICES
 	department_bitflags = DEPARTMENT_BITFLAG_CITY_SERVICES
-	display_order = 14
+	display_order = DEPARTMENT_DISPLAY_ORDER_CITY_SERVICES // NOCTURNE EDIT - ORIGINAL: display_order = 14
 	// give its own ui color?
 
 // Antag*
@@ -136,12 +136,12 @@
 	department_head = /datum/job/vampire/abbe
 	// why are you reusing the church xp.
 	department_experience_type = EXP_TYPE_CHURCH
-	display_order = 15
+	display_order = DEPARTMENT_DISPLAY_ORDER_SOCIETY_OF_LEOPOLD // NOCTURNE EDIT - ORIGINAL: display_order = 15
 	ui_color = "#fff022"
 
 // Bottom of the barrel
 /datum/job_department/citizen
 	department_name = DEPARTMENT_CITIZEN
 	department_bitflags = DEPARTMENT_BITFLAG_CITIZEN
-	display_order = 16
+	display_order = DEPARTMENT_DISPLAY_ORDER_CITIZEN // NOCTURNE EDIT - ORIGINAL: display_order = 16
 	// Don't add department_head! citizens names should not be in bold.

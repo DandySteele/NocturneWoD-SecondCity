@@ -14,7 +14,10 @@
 	organ_flags = parent_type::organ_flags | ORGAN_EXTERNAL
 
 /datum/bodypart_overlay/mutant/fluff
-	layers = EXTERNAL_FRONT | EXTERNAL_ADJACENT
+	layers = list(
+		EXTERNAL_FRONT = BODY_FRONT_LAYER,
+		EXTERNAL_ADJACENT = BODY_ADJ_LAYER,
+	)
 	feature_key = FEATURE_FLUFF_NOCTURNE
 	feature_key_sprite = "fluff"
 

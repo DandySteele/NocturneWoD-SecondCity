@@ -12,7 +12,7 @@
 	job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/magadon_middle_manager
 
-	minimal_masquerade = 5
+	minimum_masquerade = 5
 	// minimal_renown_rank = 3
 	allowed_tribes = list(TRIBE_BLACK_SPIRAL_DANCERS, TRIBE_RONIN)
 
