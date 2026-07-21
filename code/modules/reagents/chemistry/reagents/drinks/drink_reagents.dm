@@ -551,10 +551,12 @@
 
 /datum/reagent/consumable/grey_bull/on_mob_metabolize(mob/living/carbon/affected_atom)
 	. = ..()
+	/* // NOCTURNE REMOVAL START - Nah.
 	var/obj/item/organ/liver/liver = affected_atom.get_organ_slot(ORGAN_SLOT_LIVER)
 	if(HAS_TRAIT(liver, TRAIT_MAINTENANCE_METABOLISM))
 		affected_atom.add_mood_event("maintenance_fun", /datum/mood_event/maintenance_high)
 		metabolization_rate *= 0.8
+	*/ // NOCTURNE REMOVAL END
 
 /datum/reagent/consumable/grey_bull/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -565,8 +567,8 @@
 	affected_mob.adjust_bodytemperature(-2.5 * metabolization_ratio * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, affected_mob.get_body_temp_normal())
 
 /datum/reagent/consumable/spacemountainwind
-	name = "SM Wind"
-	description = "Blows right through you like a space wind."
+	name = "Mtn Chew" // NOCTURNE EDIT
+	description = "Blows right through you like a mountain wind (?)." // NOCTURNE EDIT
 	color = "#102000" // rgb: 16, 32, 0
 	taste_description = "sweet citrus soda"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -581,8 +583,8 @@
 	affected_mob.set_jitter_if_lower(5 SECONDS * metabolization_ratio * seconds_per_tick)
 
 /datum/reagent/consumable/dr_gibb
-	name = "Dr. Gibb"
-	description = "A delicious blend of 42 different flavours."
+	name = "Dr. Pibb" // NOCTURNE EDIT
+	description = "It Goes Down Good." // NOCTURNE EDIT
 	color = "#102000" // rgb: 16, 32, 0
 	taste_description = "cherry soda" // FALSE ADVERTISING
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -594,8 +596,8 @@
 	affected_mob.adjust_bodytemperature(-2.5 * metabolization_ratio * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, affected_mob.get_body_temp_normal())
 
 /datum/reagent/consumable/space_up
-	name = "Space-Up"
-	description = "Tastes like a hull breach in your mouth."
+	name = "Sven-Up" // NOCTURNE EDIT
+	description = "Who is Sven?" // NOCTURNE EDIT
 	color = COLOR_VIBRANT_LIME // rgb: 0, 255, 0
 	taste_description = "cherry soda"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -618,8 +620,8 @@
 	affected_mob.adjust_bodytemperature(-4 * metabolization_ratio * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, affected_mob.get_body_temp_normal())
 
 /datum/reagent/consumable/pwr_game
-	name = "Pwr Game"
-	description = "The only drink with the PWR that true gamers crave."
+	name = "Poweraid" // NOCTURNE EDIT
+	description = "The only drink with the power that aids true gamers." // NOCTURNE EDIT
 	color = "#9385bf" // rgb: 58, 52, 75
 	taste_description = "sweet and salty tang"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -629,8 +631,8 @@
 	. = ..()
 	if(exposed_mob?.mind?.get_skill_level(/datum/skill/gaming) >= SKILL_LEVEL_LEGENDARY && (methods & INGEST) && !HAS_TRAIT(exposed_mob, TRAIT_GAMERGOD))
 		ADD_TRAIT(exposed_mob, TRAIT_GAMERGOD, "pwr_game")
-		to_chat(exposed_mob, span_nicegreen("As you imbibe the Pwr Game, your gamer third eye opens... \
-		You feel as though a great secret of the universe has been made known to you..."))
+		to_chat(exposed_mob, span_nicegreen("As you imbibe the Poweraid, your gamer third eye opens... \
+		You feel as though a great secret of the universe has been made known to you...")) // NOCTURNE EDIT
 
 /datum/reagent/consumable/pwr_game/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -951,8 +953,8 @@
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/consumable/gibbfloats
-	name = "Gibb Floats"
-	description = "Ice cream on top of a Dr. Gibb glass."
+	name = "Pibb Floats" // NOCTURNE EDIT
+	description = "Ice cream on top of a Dr. Pibb glass." // NOCTURNE EDIT
 	color = "#B22222"
 	quality = DRINK_NICE
 	nutriment_factor = 3
@@ -1098,7 +1100,7 @@
 
 /datum/reagent/consumable/cream_soda
 	name = "Cream Soda"
-	description = "A classic space-American vanilla flavored soft drink."
+	description = "A classic American vanilla flavored soft drink." // NOCTURNE EDIT
 	color = "#dcb137"
 	quality = DRINK_VERYGOOD
 	taste_description = "fizzy vanilla"
@@ -1110,7 +1112,7 @@
 	affected_mob.adjust_bodytemperature(-2.5 * metabolization_ratio * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, affected_mob.get_body_temp_normal())
 
 /datum/reagent/consumable/sol_dry
-	name = "Sol Dry"
+	name = "Canadia Dry" // NOCTURNE EDIT
 	description = "A soothing, mellow drink made from ginger."
 	color = "#f7d26a"
 	quality = DRINK_NICE

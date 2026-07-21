@@ -758,6 +758,15 @@
 /obj/effect/mapping_helpers/door/access/chantry,
 /turf/open/floor/city/plating,
 /area/vtm/interior/library)
+"aNL" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/obj/effect/turf_decal/bordur{
+	dir = 5
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/palm_desert/outside/residential)
 "aNO" = (
 /obj/effect/decal/wallpaper/paper/stripe,
 /obj/effect/decal/wallpaper/paper/darkgreen,
@@ -3525,6 +3534,9 @@
 /obj/structure/vampstatue/angel{
 	pixel_y = 30;
 	plane = -3
+	},
+/obj/effect/turf_decal/bordur{
+	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
@@ -8241,6 +8253,9 @@
 	pixel_y = 30;
 	plane = -3
 	},
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
 "jzL" = (
@@ -8618,6 +8633,13 @@
 /obj/structure/bed/maint,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/sewer)
+"jVp" = (
+/obj/structure/table/countertop/red,
+/obj/machinery/chem_dispenser/drinks/smoothie{
+	pixel_y = 10
+	},
+/turf/open/floor/city/gummaguts,
+/area/vtm/palm_desert/interior/restaurant)
 "jVP" = (
 /obj/structure/vampdoor/glass,
 /obj/effect/mapping_helpers/door/lock,
@@ -8636,6 +8658,9 @@
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
+	},
+/obj/effect/turf_decal/bordur{
+	dir = 9
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
@@ -9649,7 +9674,7 @@
 "lbq" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
+/obj/machinery/chem_dispenser/drinks/fastfood{
 	dir = 1;
 	pixel_y = 8
 	},
@@ -10497,7 +10522,7 @@
 "lUK" = (
 /obj/structure/table/wood,
 /obj/effect/decal/rugs,
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
+/obj/machinery/chem_dispenser/drinks/fastfood{
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
@@ -10569,7 +10594,7 @@
 "lYl" = (
 /obj/structure/table/wood,
 /obj/effect/decal/rugs,
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+/obj/machinery/chem_dispenser/drinks/beer/nocturne{
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
@@ -11350,7 +11375,7 @@
 "mQw" = (
 /obj/structure/platform/lowwall/brick/window/reinforced,
 /obj/effect/decal/wallpaper/trim,
-/turf/closed/wall/vampwall/painted,
+/turf/open/floor/wood/herring,
 /area/vtm/interior/church)
 "mQJ" = (
 /obj/item/storage/pill_bottle/stimulant,
@@ -11376,7 +11401,7 @@
 /area/vtm/palm_desert/outside/supply)
 "mRB" = (
 /obj/structure/platform/lowwall/brick/window/reinforced,
-/turf/closed/wall/vampwall/painted,
+/turf/open/floor/wood/herring,
 /area/vtm/interior/church)
 "mRX" = (
 /obj/structure/chair/wood/darkpack/red{
@@ -15508,8 +15533,10 @@
 /area/vtm/interior/ghetto)
 "ree" = (
 /obj/structure/table/countertop/red,
-/obj/machinery/chem_dispenser/drinks/fullupgrade,
 /obj/machinery/light/directional/north,
+/obj/machinery/chem_dispenser/drinks/fastfood{
+	pixel_y = 10
+	},
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/restaurant)
 "reC" = (
@@ -16903,7 +16930,7 @@
 "sQS" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+/obj/machinery/chem_dispenser/drinks/beer/nocturne{
 	dir = 1;
 	pixel_y = 8
 	},
@@ -47253,7 +47280,7 @@ jNu
 fjk
 cxO
 sle
-pge
+jVp
 pge
 sfP
 neZ
@@ -56460,12 +56487,12 @@ oQz
 oQz
 gYM
 bgg
-ncp
-ncp
-ncp
-ncp
-ncp
-ncp
+qkd
+qkd
+qkd
+qkd
+qkd
+qkd
 qkd
 qkd
 qkd
@@ -64867,7 +64894,7 @@ eGg
 eGg
 eGg
 eGg
-kDs
+aNL
 kDs
 oQi
 eHR
