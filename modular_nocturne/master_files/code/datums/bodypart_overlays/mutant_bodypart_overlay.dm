@@ -16,19 +16,18 @@
 	/// Annoying annoying annoyed annoyance - this is to avoid a massive headache trying to work around tails
 	var/feature_key_sprite = null
 
-/datum/bodypart_overlay/mutant/get_overlay(layer, obj/item/bodypart/limb)
+/datum/bodypart_overlay/mutant/get_overlay(obj/item/bodypart/limb, layer_index, layer_real)
 	if(sprite_datum.color_src == USE_MATRIXED_COLORS)
 		inherit_color(limb)
-		layer = bitflag_to_layer(layer)
-		var/list/images = get_images(layer, limb)
-		color_images(images, layer, limb)
+		var/list/images = get_images(limb, layer_index, layer_real)
+		color_images(images, limb, layer_index, layer_real)
 		return images
 	else
 		return ..()
 
 /// Generate a unique key based on our sprites. So that if we've aleady drawn these sprites,
 /// they can be found in the cache and wont have to be drawn again (blessing and curse, but mostly curse)
-/datum/bodypart_overlay/mutant/generate_icon_cache()
+/datum/bodypart_overlay/mutant/icon_render_key(obj/item/bodypart/limb)
 	. = list()
 	. += "[get_base_icon_state()]"
 	. += "[get_feature_key_for_overlay()]"
@@ -49,7 +48,7 @@
 /// Only used for matrixed color mutant bodyparts.
 /// This is different from the base procs as it allows for multiple overlays to
 /// be generated for one bodypart_overlay.
-/datum/bodypart_overlay/mutant/proc/get_images(image_layer, obj/item/bodypart/limb)
+/datum/bodypart_overlay/mutant/proc/get_images(obj/item/bodypart/limb, layer_index, layer_real)
 	if(!sprite_datum)
 		CRASH("Trying to call get_images() on [type] while it didn't have a sprite_datum. This shouldn't happen, report it as soon as possible.")
 	var/returned_images = list()
@@ -58,9 +57,9 @@
 	var/index = 1
 	var/mob/living/carbon/human/owner = limb?.owner
 	last_built_icon_states = list()
-	var/list/color_layer_names = get_color_layer_names(build_mutant_icon_state(gender, image_layer))
+	var/list/color_layer_names = get_color_layer_names(build_mutant_icon_state(gender, layer_index))
 	for(var/color_index in color_layer_names)
-		var/mutable_appearance/color_layer_image = get_singular_image(build_mutant_icon_state(gender, image_layer, color_layer_names[color_index]), image_layer, owner)
+		var/mutable_appearance/color_layer_image = get_singular_image(build_mutant_icon_state(gender, layer_index, color_layer_names[color_index]), layer_real, owner)
 		returned_images += color_layer_image
 		overlay_indexes_to_color += index
 		index++
@@ -76,7 +75,7 @@
 /// Colors the given overlays list. Limb can be null.
 /// Only used for matrixed color mutant bodyparts.
 /// This is different from the base procs as it allows for multiple overlays to be colored at once.
-/datum/bodypart_overlay/mutant/proc/color_images(list/image/overlays, layer, obj/item/bodypart/limb)
+/datum/bodypart_overlay/mutant/proc/color_images(list/image/overlays, obj/item/bodypart/limb, layer_index, layer_real)
 	if(!sprite_datum || !overlays)
 		return
 	if(limb?.is_husked)
@@ -103,18 +102,18 @@
  *
  * Arguments:
  * * gender - The gender of the limb. Can be "f" or "m".
- * * image_layer - The layer on which the icon will be drawn.
+ * * layer_index - The layer on which the icon will be drawn.
  * * color_layer - The color_layer of this icon_state, if any. Should be either "primary", "secondary", "tertiary" or `null`.
  * Defaults to `null`.
  * * feature_key_suffix - A string that will be directly appended to the result
  * of `get_feature_key_for_overlay()`. Defaults to `null`.
  */
-/datum/bodypart_overlay/mutant/proc/build_mutant_icon_state(gender, image_layer, color_layer = null, feature_key_suffix = null)
+/datum/bodypart_overlay/mutant/proc/build_mutant_icon_state(gender, layer_index, color_layer = null, feature_key_suffix = null)
 	var/list/icon_state_builder = list()
 	icon_state_builder += sprite_datum.gender_specific ? gender : "m" //Male is default because sprite accessories are so ancient they predate the concept of not hardcoding gender
 	icon_state_builder += get_feature_key_for_overlay() + feature_key_suffix
 	icon_state_builder += get_base_icon_state()
-	icon_state_builder += mutant_bodyparts_layertext(image_layer)
+	icon_state_builder += layer_index
 	if(color_layer != MUTANT_ACCESSORY_NO_AFFIX)
 		icon_state_builder += color_layer
 	var/built_icon_state = icon_state_builder.Join("_")

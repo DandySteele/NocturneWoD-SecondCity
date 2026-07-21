@@ -1,14 +1,14 @@
 /datum/sprite_accessory/clothing/underwear/male_bee
 	name = "Boxers - Bee"
 	icon_state = "bee_shorts"
-	has_digitigrade = TRUE
+	digi_icon_state = "bee_shorts_d"
 	gender = MALE
 	use_static = TRUE
 
 /datum/sprite_accessory/clothing/underwear/boyshorts
 	name = "Boyshorts"
 	icon_state = "boyshorts"
-	has_digitigrade = TRUE
+	digi_icon_state = "boyshorts_d"
 	gender = FEMALE
 
 /datum/sprite_accessory/clothing/underwear/boyshorts_alt
@@ -74,6 +74,7 @@
 /datum/sprite_accessory/clothing/underwear/female_kinky
 	name = "Panties - Lingerie"
 	icon_state = "panties_kinky"
+	digi_icon_state = "panties_kinky_d"
 	gender = FEMALE
 	use_static = TRUE
 
@@ -145,9 +146,11 @@
 /datum/sprite_accessory/clothing/underwear/fishnet_lower
 	name = "Panties - Fishnet"
 	icon_state = "fishnet_lower"
+	digi_icon_state = "fishnet_lower_d"
 	gender = FEMALE
 	use_static = TRUE
 
 /datum/sprite_accessory/clothing/underwear/fishnet_lower/alt
 	name = "Panties - Fishnet (Greyscale)"
 	icon_state = "fishnet_lower_alt"
+	digi_icon_state = "fishnet_lower_alt_d"

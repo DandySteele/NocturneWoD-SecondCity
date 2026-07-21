@@ -35,7 +35,10 @@
 
 /datum/bodypart_overlay/mutant/genital/testicles
 	feature_key = FEATURE_TESTICLES_NOCTURNE
-	layers = EXTERNAL_BODY_FRONT_UNDER_CLOTHES | EXTERNAL_BEHIND
+	layers = list(
+		EXTERNAL_BODY_FRONT_UNDER_CLOTHES = BODY_FRONT_UNDER_CLOTHES_LAYER,
+		EXTERNAL_BEHIND = BODY_BEHIND_LAYER,
+	)
 	feature_key_sprite = "testicles"
 
 	organ_slot = ORGAN_SLOT_EXTERNAL_TESTICLES

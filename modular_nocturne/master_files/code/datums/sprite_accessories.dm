@@ -75,28 +75,28 @@
 	var/hides_breasts = FALSE
 
 /datum/sprite_accessory/clothing/underwear/male_briefs
-	has_digitigrade = TRUE
+	digi_icon_state = "male_briefs_d"
 
 /datum/sprite_accessory/clothing/underwear/male_boxers
-	has_digitigrade = TRUE
+	digi_icon_state = "male_boxers_d"
 
 /datum/sprite_accessory/clothing/underwear/male_stripe
-	has_digitigrade = TRUE
+	digi_icon_state = "male_stripe_d"
 
 /datum/sprite_accessory/clothing/underwear/male_midway
-	has_digitigrade = TRUE
+	digi_icon_state = "male_midway_d"
 
 /datum/sprite_accessory/clothing/underwear/male_longjohns
-	has_digitigrade = TRUE
+	digi_icon_state = "male_longjohns_d"
 
 /datum/sprite_accessory/clothing/underwear/male_hearts
-	has_digitigrade = TRUE
+	digi_icon_state = "male_hearts_d"
 
 /datum/sprite_accessory/clothing/underwear/male_commie
-	has_digitigrade = TRUE
+	digi_icon_state = "male_commie_d"
 
 /datum/sprite_accessory/clothing/underwear/male_usastripe
-	has_digitigrade = TRUE
+	digi_icon_state = "male_usastripe_d"
 
 /datum/sprite_accessory/clothing/underwear/male_uk
-	has_digitigrade = TRUE
+	digi_icon_state = "male_uk_d"

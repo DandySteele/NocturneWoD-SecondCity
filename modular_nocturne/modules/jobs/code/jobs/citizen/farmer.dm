@@ -14,7 +14,7 @@
 		/datum/job_department/city_services,
 	)
 	display_order = JOB_DISPLAY_ORDER_FARMER
-	minimal_masquerade = 0
+	minimum_masquerade = 0
 	known_contacts = list(
 		JOB_RESTAURANT,
 	)

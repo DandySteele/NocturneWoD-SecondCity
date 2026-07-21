@@ -5,7 +5,7 @@
 /datum/bodypart_overlay/simple/body_marking/body_markings/get_accessory(name)
 	return SSaccessories.body_markings[name]
 
-/datum/bodypart_overlay/simple/body_marking/body_markings/get_image(layer, obj/item/bodypart/limb)
+/datum/bodypart_overlay/simple/body_marking/body_markings/get_image(obj/item/bodypart/limb, layer_index, layer_real)
 	var/gender_string = ""
 	if(use_gender && !(limb.body_zone in GLOB.limb_zones))
 		gender_string = (limb.is_dimorphic) ? (limb.limb_gender == "m" ? "_m" : "_f") : "_m" // defaults to male so that andros dont get tiddies
@@ -14,4 +14,15 @@
 		zonestring = "digitigrade_1_" + limb.body_zone
 	if(ishand)
 		zonestring = limb.aux_zone
-	return image(icon, icon_state + "_" + zonestring + gender_string, layer = layer)
+		layer_real = BODY_HAND_LAYER
+	return image(icon, icon_state + "_" + zonestring + gender_string, layer = layer_real)
+
+/datum/bodypart_overlay/simple/body_marking/body_markings/icon_render_key(obj/item/bodypart/limb)
+	. = ..()
+
+	var/zonestring = limb.body_zone
+	if(limb.bodyshape & BODYSHAPE_DIGITIGRADE)
+		zonestring = limb.body_zone + "_d"
+	if(ishand)
+		zonestring = limb.aux_zone
+	. += zonestring
