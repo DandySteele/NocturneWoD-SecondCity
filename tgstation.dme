@@ -8214,5 +8214,6 @@
 #include "modular_nocturne\modules\title_screen\code\verbs\title_screen_verbs.dm"
 #include "modular_nocturne\modules\walls\code\floors\desert.dm"
 #include "modular_nocturne\modules\weapons\code\hardcase.dm"
+#include "modular_nocturne\modules\werewolf_the_apocalypse\code\splats\fera_species.dm"
 #include "modular_nocturne\modules\whitelist\code\whitelist.dm"
 // END_INCLUDE
