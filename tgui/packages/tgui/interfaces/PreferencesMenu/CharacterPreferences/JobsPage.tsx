@@ -660,29 +660,95 @@ export function JobsPage() {
             <Stack.Item>
               <Stack vertical>
                 <PriorityHeaders />
-                <Department department="Prince" />
-                <Department department="Camarilla" />
-                <Department department="Anarch" />
-                <Department department="Chantry" />
-                <Department department="Giovanni" />
+                <Department
+                  department="Prince"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Camarilla"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Anarch"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Chantry"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Giovanni"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
               </Stack>
             </Stack.Item>
             <Stack.Item mt={-5.9}>
               <Stack vertical>
                 <PriorityHeaders />
-                <Department department="Police" />
-                <Department department="Warehouse" />
-                <Department department="City_Services" />
-                <Department department="Citizen" />
+                <Department department="Police"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Warehouse"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="City Services"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Citizen"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
               </Stack>
             </Stack.Item>
             <Stack.Item>
               <Stack vertical>
                 <PriorityHeaders />
-                <Department department="Magadon" />
-                <Department department="Sabbat" />
-                <Department department="Garou_Nation" />
-                <Department department="Bushwhacker" />
+                <Department department="Magadon"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Sabbat"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Garou Nation"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
+                <Department department="Bushwhacker"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                />
               </Stack>
             </Stack.Item>
             { /* NOCTURNE ADDITION END */ }
