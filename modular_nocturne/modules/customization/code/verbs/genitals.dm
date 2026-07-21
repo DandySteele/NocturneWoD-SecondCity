@@ -1,4 +1,4 @@
-GAME_VERB(/mob/living/carbon/human, toggle_genitals, "Expose/Hide genitals", "Allows you to toggle which genitals should show through clothes or not.", "IC")
+GAME_VERB_DESC(/mob/living/carbon/human, toggle_genitals, "Expose/Hide genitals", "Allows you to toggle which genitals should show through clothes or not.", "IC")
 	if(stat != CONSCIOUS)
 		to_chat(usr, span_warning("You can't do this right now..."))
 		return

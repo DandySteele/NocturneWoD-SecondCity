@@ -1,4 +1,4 @@
-GAME_VERB(/mob/living/carbon/human, toggle_undies, "Toggle underwear visibility", "Allows you to toggle which underwear should show or be hidden. Underwear will obscure genitals.", "IC")
+GAME_VERB_DESC(/mob/living/carbon/human, toggle_undies, "Toggle underwear visibility", "Allows you to toggle which underwear should show or be hidden. Underwear will obscure genitals.", "IC")
 	if(stat != CONSCIOUS)
 		to_chat(usr, span_warning("You can't toggle underwear visibility right now..."))
 		return

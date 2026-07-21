@@ -1,4 +1,4 @@
-GAME_VERB(/mob/living/carbon/human, hide_mutant_parts, "Hide/Reveal mutant parts", "Allows you to toggle which mutant parts should try to be hidden.", "IC")
+GAME_VERB_DESC(/mob/living/carbon/human, hide_mutant_parts, "Hide/Reveal mutant parts", "Allows you to toggle which mutant parts should try to be hidden.", "IC")
 	if(stat != CONSCIOUS)
 		to_chat(usr, span_warning("You can't do this right now..."))
 		return
