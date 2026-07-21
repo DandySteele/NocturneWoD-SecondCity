@@ -20351,7 +20351,7 @@
 /obj/item/food/grown/redbeet{
 	pixel_y = 10
 	},
-/obj/item/food/grown/parsnip{
+/obj/item/food/grown/carrotlike/parsnip{
 	pixel_x = 6
 	},
 /obj/item/food/grown/peas{
