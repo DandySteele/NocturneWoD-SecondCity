@@ -1,0 +1,5 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - rscadd: "Added SSD and combat indicators"
+  - rscadd: "Added status button to surrender when in combat mode"
