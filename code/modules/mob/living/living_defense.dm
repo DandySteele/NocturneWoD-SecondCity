@@ -226,6 +226,16 @@
 	combat_mode = new_mode
 	SEND_SIGNAL(src, COMSIG_COMBAT_MODE_TOGGLED)
 	hud_used?.screen_objects[HUD_MOB_INTENTS]?.update_appearance()
+
+	// NOCTURNE ADDITION START
+	set_combat_indicator(combat_mode)
+
+	if(combat_mode)
+		apply_status_effect(/datum/status_effect/grouped/surrender, src)
+	else
+		remove_status_effect(/datum/status_effect/grouped/surrender, src)
+	// NOCTURNE ADDITION END
+
 	if(silent || !client?.prefs.read_preference(/datum/preference/toggle/sound_combatmode))
 		return
 	if(combat_mode)
