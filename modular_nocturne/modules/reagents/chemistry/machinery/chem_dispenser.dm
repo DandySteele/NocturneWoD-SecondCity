@@ -10,6 +10,7 @@
 		/datum/reagent/consumable/ice,
 		/datum/reagent/consumable/icetea,
 		/datum/reagent/consumable/menthol,
+		/datum/reagent/consumable/berryjuice,
 		/datum/reagent/consumable/lemonjuice,
 		/datum/reagent/consumable/lemon_lime,
 		/datum/reagent/consumable/limejuice,
@@ -24,6 +25,7 @@
 		/datum/reagent/consumable/tomatojuice,
 		/datum/reagent/consumable/tonic,
 		/datum/reagent/water,
+		/datum/reagent/consumable/coffee,
 	)
 
 	drink_emagged_reagents = list()
