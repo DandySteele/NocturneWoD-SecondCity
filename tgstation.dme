@@ -8202,6 +8202,7 @@
 #include "modular_nocturne\modules\landmarks\code\daytime_latejoin.dm"
 #include "modular_nocturne\modules\mapgen\code\biomes.dm"
 #include "modular_nocturne\modules\mapgen\code\jungle_generator.dm"
+#include "modular_nocturne\modules\neck_wearing\neck_wearing.dm"
 #include "modular_nocturne\modules\npc\code\human\socialroles\shop\pharmacystore.dm"
 #include "modular_nocturne\modules\paperwork\code\fax.dm"
 #include "modular_nocturne\modules\retail\code\stores\police.dm"
