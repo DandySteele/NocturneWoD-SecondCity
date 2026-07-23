@@ -8635,7 +8635,7 @@
 /area/vtm/interior/sewer)
 "jVp" = (
 /obj/structure/table/countertop/red,
-/obj/machinery/chem_dispenser/drinks/smoothie{
+/obj/machinery/chem_dispenser/drinks/fullupgrade/smoothie{
 	pixel_y = 10
 	},
 /turf/open/floor/city/gummaguts,
@@ -9674,7 +9674,7 @@
 "lbq" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/fastfood{
+/obj/machinery/chem_dispenser/drinks/fullupgrade/fastfood{
 	dir = 1;
 	pixel_y = 8
 	},
@@ -10522,7 +10522,7 @@
 "lUK" = (
 /obj/structure/table/wood,
 /obj/effect/decal/rugs,
-/obj/machinery/chem_dispenser/drinks/fastfood{
+/obj/machinery/chem_dispenser/drinks/fullupgrade/fastfood{
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
@@ -10594,7 +10594,7 @@
 "lYl" = (
 /obj/structure/table/wood,
 /obj/effect/decal/rugs,
-/obj/machinery/chem_dispenser/drinks/beer/nocturne{
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade/nocturne{
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
@@ -15527,7 +15527,7 @@
 "ree" = (
 /obj/structure/table/countertop/red,
 /obj/machinery/light/directional/north,
-/obj/machinery/chem_dispenser/drinks/fastfood{
+/obj/machinery/chem_dispenser/drinks/fullupgrade/fastfood{
 	pixel_y = 10
 	},
 /turf/open/floor/city/gummaguts,
@@ -16923,7 +16923,7 @@
 "sQS" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/beer/nocturne{
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade/nocturne{
 	dir = 1;
 	pixel_y = 8
 	},
