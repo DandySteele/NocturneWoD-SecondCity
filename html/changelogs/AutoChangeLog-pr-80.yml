@@ -1,0 +1,8 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - bugfix: "Fixed bestial form stat bonuses not getting applied to anthro/demihuman players"
+  - bugfix: "Fixed drink dispensers"
+  - bugfix: "Garou now have park ranger keys again"
+  - bugfix: "Fixed desert sand not having a description"
+  - bugfix: "Fixed holes in the Earth from explosions"
