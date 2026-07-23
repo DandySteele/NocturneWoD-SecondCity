@@ -1,6 +1,7 @@
 /turf/open/misc/drought
 	gender = PLURAL
 	name = "desert"
+	desc = "Dry, rocky sand."
 	icon = 'modular_nocturne/modules/walls/icons/turf/desert.dmi'
 	icon_state = "desert"
 	base_icon_state = "desert"
