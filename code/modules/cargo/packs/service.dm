@@ -322,3 +322,10 @@
 	cost = CARGO_CRATE_VALUE * 2
 	contains = list(/obj/item/storage/box/mousetraps = 3)
 	crate_name = "mousetraps crate"
+
+/datum/supply_pack/service/jukebox
+	name = "Jukebox Crate"
+	desc = "A crate full of vinyl records and a working jukebox."
+	cost = CARGO_CRATE_VALUE * 20
+	contains = list(/obj/machinery/jukebox)
+	crate_name = "jukebox crate"
