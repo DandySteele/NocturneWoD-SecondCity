@@ -9,6 +9,7 @@
 	name = "Very Uncool Table"
 	desc = "This will make coders scream."
 	icon = 'modular_nocturne/modules/decor/icons/mojave_structures/standalone_tables.dmi'
+	icon_state = "table_wood_stand"
 	smoothing_flags = NONE
 	smoothing_groups = null
 	canSmoothWith = null
@@ -48,6 +49,7 @@
 	name = "base class large ms13 table"
 	desc = "CALL A CODER, CALL A CODER. For ME!"
 	icon = 'modular_nocturne/modules/decor/icons/mojave_structures/64x64_large_furniture.dmi'
+	icon_state = "table_wood_wide_square"
 
 /obj/structure/table/no_smooth/large/Initialize(mapload)
 	. = ..()
