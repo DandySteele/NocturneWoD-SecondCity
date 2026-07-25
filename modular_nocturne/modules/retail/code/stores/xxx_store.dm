@@ -211,8 +211,12 @@
 			"name" = "Lewd",
 			"icon" = "heart",
 			"products" = list(
+				/obj/item/clothing/glasses/blindfold = 10,
+				/obj/item/clothing/mask/muzzle/ball_gag = 10,
+				/obj/item/clothing/mask/muzzle/ring_gag = 10,
+				/obj/item/restraints/handcuffs/fake = 10,
 				/obj/item/clothing/head/vampire/nocturne_bunnyears = 10,
-				/obj/item/clothing/under/costume/nocturne_bunnysuit = 10,
+				/obj/item/clothing/under/costume/nocturne_bunnysuit = 30,
 			),
 		),
 	)
