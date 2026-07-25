@@ -8169,6 +8169,7 @@
 #include "modular_nocturne\modules\clothing\code\clothing\neck.dm"
 #include "modular_nocturne\modules\clothing\code\clothing\shoes.dm"
 #include "modular_nocturne\modules\clothing\code\clothing\suits.dm"
+#include "modular_nocturne\modules\clothing\code\clothing\under.dm"
 #include "modular_nocturne\modules\clothing\code\clothing\colorable\head.dm"
 #include "modular_nocturne\modules\clothing\code\clothing\colorable\neck.dm"
 #include "modular_nocturne\modules\clothing\code\clothing\colorable\suits.dm"

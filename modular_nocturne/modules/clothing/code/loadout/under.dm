@@ -51,3 +51,9 @@
 /datum/loadout_item/uniform/nocturne_bunnysuit
 	name = "Bunny Suit"
 	item_path = /obj/item/clothing/under/costume/nocturne_bunnysuit
+
+// misc
+
+/datum/loadout_item/uniform/nocturne_gear_harness
+	name = "Gear Harness"
+	item_path = /obj/item/clothing/under/vampire/gear_harness
