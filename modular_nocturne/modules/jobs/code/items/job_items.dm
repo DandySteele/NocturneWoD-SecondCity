@@ -71,3 +71,15 @@
 	ONFLOOR_ICON_HELPER('modular_nocturne/modules/jobs/icons/id_onfloors.dmi')
 	worn_icon = 'modular_nocturne/modules/jobs/icons/id_worn.dmi'
 	worn_icon_state = "purple_id"
+
+/obj/item/card/townhall
+	name = "deputy clerk badge"
+	desc = "A badge showing employment in the public sector."
+	icon = 'modular_darkpack/modules/jobs/icons/id_items.dmi'
+	icon_state = "grey_id"
+	ONFLOOR_ICON_HELPER('modular_darkpack/modules/jobs/icons/id_onfloors.dmi')
+	worn_icon = 'modular_darkpack/modules/jobs/icons/id_worn.dmi'
+	worn_icon_state = "grey_id"
+
+/obj/item/card/townhall/aide
+	name = "mayor's aide badge"
