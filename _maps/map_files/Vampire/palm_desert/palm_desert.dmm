@@ -3483,6 +3483,15 @@
 "dLy" = (
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/setite)
+"dLD" = (
+/obj/structure/vampdoor/wood{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wood/dark{
+	dir = 8
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert/interior/strip_mall)
 "dMt" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood/smooth/old,
@@ -5132,6 +5141,10 @@
 /mob/living/basic/frog,
 /turf/open/water,
 /area/vtm/palm_desert/outside/office)
+"fiW" = (
+/obj/structure/platform/lowwall/painted/window,
+/turf/open/floor/wood/old,
+/area/vtm/palm_desert/interior/clinic)
 "fiY" = (
 /obj/structure/roofstuff/vent_end{
 	dir = 8
@@ -6811,11 +6824,6 @@
 "gYM" = (
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/industrial)
-"gZy" = (
-/obj/structure/hedge,
-/obj/structure/flora/bush/flowers_pp/style_random,
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
 "hbb" = (
 /obj/structure/table/no_smooth/modular_desk{
 	dir = 1
@@ -9699,9 +9707,12 @@
 /turf/open/floor/plating/canalplating,
 /area/vtm/interior/sabbat_lair)
 "jZw" = (
-/obj/structure/platform/lowwall/painted/window,
-/turf/open/floor/wood/old,
-/area/vtm/palm_desert/interior/clinic)
+/obj/effect/turf_decal/siding/wood/light{
+	dir = 1
+	},
+/obj/effect/landmark/start/darkpack/aide,
+/turf/open/floor/carpet/darkpack/orangesilver,
+/area/vtm/palm_desert/interior/townhall)
 "jZI" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/asphalt,
@@ -11032,14 +11043,12 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/gun_store)
 "lkh" = (
-/obj/structure/vampdoor/wood{
-	dir = 4
-	},
-/obj/effect/turf_decal/siding/wood/dark{
+/obj/effect/turf_decal/siding/wood/light{
 	dir = 8
 	},
-/turf/open/floor/wood/smooth/old,
-/area/vtm/palm_desert/interior/strip_mall)
+/obj/effect/landmark/start/darkpack/clerk,
+/turf/open/floor/carpet/darkpack/orangesilver,
+/area/vtm/palm_desert/interior/townhall)
 "lkk" = (
 /obj/effect/turf_decal/bordur/end{
 	dir = 1
@@ -12450,13 +12459,6 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/outside/supply)
-"mEy" = (
-/obj/effect/turf_decal/siding/wood/light{
-	dir = 1
-	},
-/obj/effect/landmark/start/darkpack/aide,
-/turf/open/floor/carpet/darkpack/orangesilver,
-/area/vtm/palm_desert/interior/townhall)
 "mES" = (
 /obj/effect/turf_decal/siding/grey{
 	dir = 8
@@ -14220,6 +14222,11 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/townhall)
+"oyK" = (
+/obj/structure/hedge,
+/obj/structure/flora/bush/flowers_pp/style_random,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/clinic)
 "oyQ" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 8;
@@ -15046,7 +15053,7 @@
 "pjh" = (
 /obj/structure/platform/lowwall/brick_old/window,
 /obj/effect/decal/wallpaper/grey/low,
-/turf/open/genturf,
+/turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/strip_mall)
 "pjp" = (
 /obj/structure/rack/food{
@@ -17970,13 +17977,6 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
-"rUJ" = (
-/obj/effect/turf_decal/siding/wood/light{
-	dir = 8
-	},
-/obj/effect/landmark/start/darkpack/clerk,
-/turf/open/floor/carpet/darkpack/orangesilver,
-/area/vtm/palm_desert/interior/townhall)
 "rUZ" = (
 /obj/effect/turf_decal/trimline/blue/corner{
 	dir = 1
@@ -22261,7 +22261,7 @@
 /area/vtm/palm_desert/interior/xxx_store)
 "wNL" = (
 /obj/structure/platform/lowwall/brick_old/window,
-/turf/open/genturf,
+/turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/strip_mall)
 "wOk" = (
 /obj/structure/vampdoor/woodglass,
@@ -55202,7 +55202,7 @@ oQz
 oQz
 fCc
 uES
-lkh
+dLD
 fCc
 hPo
 fOb
@@ -62914,8 +62914,8 @@ lzg
 lzg
 lzg
 lzg
-jZw
-jZw
+fiW
+fiW
 lzg
 lzg
 gYM
@@ -78440,7 +78440,7 @@ wtk
 ksV
 rJr
 fYW
-rUJ
+lkh
 fYW
 cQk
 ijn
@@ -79505,7 +79505,7 @@ tZu
 mgB
 fiU
 ijn
-mEy
+jZw
 cti
 ijn
 bPe
@@ -84794,7 +84794,7 @@ ihi
 nNp
 imf
 tYk
-gZy
+oyK
 sOp
 sOp
 sOp
