@@ -2,7 +2,7 @@
 // then do a list substitution with "\2 = \3,\n"
 
 /obj/structure/retail/xxx_store
-	desc = "Purchase all the finest outfits.. Or don't wagie.."
+	desc = "Purchase all the latest, trendiest outfits! ...toys are in the back."
 	product_categories = list(
 		list(
 			"name" = "Head",
@@ -215,6 +215,7 @@
 				/obj/item/clothing/mask/muzzle/ball_gag = 10,
 				/obj/item/clothing/mask/muzzle/ring_gag = 10,
 				/obj/item/restraints/handcuffs/fake = 10,
+				/obj/item/reagent_containers/applicator/pill/magazin = 20,
 				/obj/item/clothing/head/vampire/nocturne_bunnyears = 10,
 				/obj/item/clothing/under/costume/nocturne_bunnysuit = 30,
 			),
