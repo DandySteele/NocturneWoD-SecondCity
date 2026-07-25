@@ -5,7 +5,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Mayor of Palm Desert."
-	config_tag = "TOWNHALL_CLERK"
+	config_tag = "TOWNHALL_AIDE"
 	outfit = /datum/outfit/job/vampire/aide
 	job_flags = CITY_JOB_FLAGS
 	exp_required_type_department = EXP_TYPE_SERVICES
