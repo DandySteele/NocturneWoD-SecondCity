@@ -8258,6 +8258,7 @@
 #include "modular_nocturne\modules\drugs\code\magazin\reagents.dm"
 #include "modular_nocturne\modules\drugs\code\meth\items.dm"
 #include "modular_nocturne\modules\drugs\code\weed\items.dm"
+#include "modular_nocturne\modules\emotes\code\_emotes.dm"
 #include "modular_nocturne\modules\flavor_text\code\examine.dm"
 #include "modular_nocturne\modules\flavor_text\code\preferences\examine_headshot_pref.dm"
 #include "modular_nocturne\modules\indicators\code\_indicator.dm"
