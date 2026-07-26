@@ -155,3 +155,18 @@
 	fire_controled = TRUE
 	show_area_name = TRUE
 	domain = TRUE
+
+/area/vtm/palm_desert/interior/strip_mall
+	name = "Strip Mall"
+	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	show_area_name = TRUE
+
+/area/vtm/palm_desert/interior/strip_mall_arcade
+	name = "Gamer's Haven"
+	icon_state = "hotel"
+	zone_type = ZONE_NO_MASQUERADE
+	ambience_index = AMBIENCE_ARCADE
+	fire_controled = TRUE
+	show_area_name = TRUE

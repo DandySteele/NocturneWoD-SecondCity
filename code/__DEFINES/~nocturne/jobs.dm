@@ -4,6 +4,9 @@
 #define JOB_RESTAURANT "Restaurant Employee"
 #define JOB_SALON "Salon Worker"
 
+#define JOB_TOWNHALL_CLERK "Deputy Clerk"
+#define JOB_TOWNHALL_MAYORAIDE "Mayor's Aide"
+
 #define JOB_MAGADON_CORP_HEAD "Clinic Head Manager"
 #define JOB_MAGADON_CORP_MIDDLE_MANAGER "Clinic Middle Manager"
 #define JOB_MAGADON_SECURITY_CHIEF "Clinic Security Chief"

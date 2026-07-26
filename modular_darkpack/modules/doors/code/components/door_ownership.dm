@@ -2,6 +2,24 @@
 	/// Type of ownership (apartment, car, etc.)
 	var/ownership_type = LOCK_OWNERSHIP_APARTMENT
 
+// NOCTURNE ADDITION START
+/datum/component/door_ownership/Initialize(forced_ownership_type)
+	if(istype(parent, /obj/darkpack_car))
+		ownership_type = LOCK_OWNERSHIP_CAR
+		var/obj/darkpack_car/car = parent
+		car.flags_1 |= HAS_CONTEXTUAL_SCREENTIPS_1
+	else if(istype(parent, /obj/structure/vampdoor))
+		if(forced_ownership_type)
+			ownership_type = forced_ownership_type
+		else
+			ownership_type = LOCK_OWNERSHIP_APARTMENT
+		var/obj/structure/vampdoor/door = parent
+		door.flags_1 |= HAS_CONTEXTUAL_SCREENTIPS_1
+	else
+		return COMPONENT_INCOMPATIBLE
+// NOCTURNE ADDITION END
+
+/* // NOCTURNE REMOVAL START
 /datum/component/door_ownership/Initialize()
 
 	if(istype(parent, /obj/darkpack_car))
@@ -14,6 +32,7 @@
 		door.flags_1 |= HAS_CONTEXTUAL_SCREENTIPS_1
 	else
 		return COMPONENT_INCOMPATIBLE
+*/ // NOCTURNE REMOVAL END
 
 
 /datum/component/door_ownership/RegisterWithParent()
@@ -65,6 +84,11 @@
 		if(LOCK_OWNERSHIP_APARTMENT)
 			ownership_question = "Is this my apartment?"
 			alert_title = "Apartment"
+		// NOCTURNE ADDITION START
+		if(LOCK_OWNERSHIP_BUSINESS)
+			ownership_question = "Is this my business?"
+			alert_title = "Business"
+		// NOCTURNE ADDITION END
 
 	var/alert = tgui_alert(human, ownership_question, alert_title, list("Yes", "No"))
 	if(alert != "Yes")

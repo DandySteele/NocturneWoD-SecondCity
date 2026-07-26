@@ -19,6 +19,10 @@ GLOBAL_LIST_INIT(office_ambience, list(
 	'modular_darkpack/modules/ambience/sounds/interior.ogg'
 ))
 
+GLOBAL_LIST_INIT(arcade_ambience, list(
+	'modular_nocturne/modules/ambience/sounds/arcade.ogg'
+))
+
 GLOBAL_LIST_INIT(music_assoc,list(
 	MUSIC_CITY = list('modular_darkpack/modules/ambience/sounds/music/downtown.ogg', 'modular_darkpack/modules/ambience/sounds/music/downtown_alt.ogg', 'modular_darkpack/modules/ambience/sounds/music/what_comes_next.ogg', 'modular_darkpack/modules/ambience/sounds/music/vtm_redemption_nyc_hub.ogg'),
 	MUSIC_FOREST = list('modular_darkpack/modules/ambience/sounds/music/night_ambience.ogg', 'modular_darkpack/modules/ambience/sounds/music/for_my_clan.ogg'),

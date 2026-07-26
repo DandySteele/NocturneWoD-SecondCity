@@ -55,6 +55,11 @@
 		cached_flat_icon.Crop(ID_ICON_BORDERS)
 	return cached_flat_icon
 
+/obj/item/card/attack_self(mob/user)
+	if(Adjacent(user))
+		user.visible_message(span_notice("[user] shows you: [icon2html(src, viewers(user))] [src.name]."), span_notice("You show \the [src.name]."))
+	add_fingerprint(user)
+
 /*
  * ID CARDS
  */
@@ -565,6 +570,7 @@
 
 	return TRUE
 
+/* // NOCTURNE REMOVAL - START
 /obj/item/card/id/attack_self(mob/user)
 	if(Adjacent(user))
 		var/minor
@@ -572,6 +578,7 @@
 			minor = " <b>(MINOR)</b>"
 		user.visible_message(span_notice("[user] shows you: [icon2html(src, viewers(user))] [src.name][minor]."), span_notice("You show \the [src.name][minor]."))
 	add_fingerprint(user)
+*/ // NOCTURNE REMOVAL - END
 
 /obj/item/card/id/interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!check_allowed_items(interacting_with) || !isfloorturf(interacting_with))

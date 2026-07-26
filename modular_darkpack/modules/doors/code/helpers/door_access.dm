@@ -220,8 +220,20 @@
 	payload.lock_id = "npc[rand(1, 20)]"
 
 /obj/effect/mapping_helpers/door/access/claimable
+	var/forced_ownership_type // NOCTURNE ADDITION
 
 /obj/effect/mapping_helpers/door/access/claimable/payload(obj/structure/vampdoor/payload)
 	if(!payload.lock_id)
 		payload.lock_id = "[rand(1,9999999)]"
-	payload.AddComponent(/datum/component/door_ownership)
+	payload.AddComponent(/datum/component/door_ownership, forced_ownership_type) // NOCTURNE EDIT - ORIGINAL: payload.AddComponent(/datum/component/door_ownership)
+
+// NOCTURNE ADDITION START
+/obj/effect/mapping_helpers/door/access/claimable/business
+	forced_ownership_type = LOCK_OWNERSHIP_BUSINESS
+
+/obj/effect/mapping_helpers/door/access/townhall
+	lock_id = LOCKACCESS_TOWNHALL
+
+/obj/effect/mapping_helpers/door/access/themayor
+	lock_id = LOCKACCESS_THEMAYOR
+// NOCTURNE ADDITION END

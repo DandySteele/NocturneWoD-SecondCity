@@ -1,6 +1,6 @@
 /datum/job/vampire/magadon_doctor
 	title = JOB_MAGADON_DOCTOR
-	description = "You are a doctor for the local Autumn Health clinic. Help any wounded or diseased that come in. Pump them full of whatever prescription cocktail your heart desires."
+	description = "You are a doctor for the local Autumn Health clinic. Help any wounded or diseased that come in. Pump them full of whatever prescription cocktail your heart desires. Do not go into the basement."
 	faction = FACTION_PENTEX
 	total_positions = 4
 	spawn_positions = 4
@@ -22,6 +22,7 @@
 	)
 
 	alt_titles = list(
+		JOB_MAGADON_DOCTOR,
 		"Clinic Nurse",
 		"Clinic Surgeon",
 		"Clinic Physician",

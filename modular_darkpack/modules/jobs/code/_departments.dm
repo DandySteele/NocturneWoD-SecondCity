@@ -126,6 +126,7 @@
 /datum/job_department/city_services
 	department_name = DEPARTMENT_CITY_SERVICES
 	department_bitflags = DEPARTMENT_BITFLAG_CITY_SERVICES
+	department_head = /datum/job/vampire/aide // NOCTURNE ADDITION
 	display_order = DEPARTMENT_DISPLAY_ORDER_CITY_SERVICES // NOCTURNE EDIT - ORIGINAL: display_order = 14
 	// give its own ui color?
 
