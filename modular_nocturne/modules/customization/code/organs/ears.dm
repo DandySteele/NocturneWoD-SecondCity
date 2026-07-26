@@ -13,6 +13,8 @@
 	feature_key = FEATURE_EARS_NOCTURNE
 	feature_key_sprite = FEATURE_EARS
 
+	offset_location = UPPER_BODY
+
 /datum/bodypart_overlay/mutant/ears/mutant/inherit_color(obj/item/bodypart/bodypart_owner, force)
 	if(isnull(bodypart_owner))
 		draw_color = null
