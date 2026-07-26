@@ -14,12 +14,14 @@ Now, Magazin has gained a new life as a popular party drug sold in shady gas sta
 /datum/reagent/drug/magazin/on_mob_metabolize(mob/living/affected_mob)
 	. = ..()
 	// give the user a stiffy
-	for(var/obj/item/organ/genital/genital in affected_mob.organs)
-		if(!genital.aroused == AROUSAL_CANT)
-			genital.aroused = AROUSAL_FULL
-			genital.update_sprite_suffix()
+	if(iscarbon(affected_mob))
+		var/mob/living/carbon/affected_carbon = affected_mob
+		for(var/obj/item/organ/genital/genital in affected_carbon.organs)
+			if(!genital.aroused == AROUSAL_CANT)
+				genital.aroused = AROUSAL_FULL
+				genital.update_sprite_suffix()
 
-	affected_mob.update_body()
+		affected_carbon.update_body()
 
 /datum/reagent/drug/magazin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -34,4 +36,3 @@ Now, Magazin has gained a new life as a popular party drug sold in shady gas sta
 	required_reagents = list(/datum/reagent/carbon = 2, /datum/reagent/hydrogen = 2, /datum/reagent/oxygen = 2, /datum/reagent/water = 1)
 	required_temp = 400
 	mix_message = "The mixture boils off a pink vapor..."
-	erp_reaction = TRUE
