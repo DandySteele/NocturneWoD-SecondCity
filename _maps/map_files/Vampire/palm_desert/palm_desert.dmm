@@ -567,9 +567,7 @@
 	dir = 1;
 	color = "#CD5C5C"
 	},
-/obj/machinery/light/directional/south{
-	fire_colour = "#f2e0bd"
-	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "aDg" = (
@@ -1414,10 +1412,6 @@
 "buk" = (
 /obj/structure/table/countertop/red,
 /obj/structure/extinguisher_cabinet/directional/north,
-/obj/machinery/processor{
-	pixel_x = 0;
-	pixel_y = 9
-	},
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
 "but" = (
@@ -2668,7 +2662,8 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/crate/bin,
 /obj/machinery/light/directional/south{
-	light_color = "#FFDDCC"
+	light_color = "#FFDDCC";
+	fire_colour = "#f2bf80"
 	},
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
@@ -3739,7 +3734,7 @@
 	pixel_x = -8;
 	pixel_y = 6
 	},
-/obj/effect/decal/graffiti,
+/obj/effect/decal/anarch_graffiti,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
 "dUm" = (
@@ -7178,6 +7173,13 @@
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
 /area/vtm/interior/theatre)
+"hpn" = (
+/obj/effect/turf_decal/bordur{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "hqw" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
 /obj/structure/flora/bush/flowers_yw/style_random{
@@ -8737,6 +8739,26 @@
 	pixel_y = 25
 	},
 /obj/structure/rack/tall/metal_shelf,
+/obj/item/storage/box/actionfigure{
+	name = "box of Mickey-Toys";
+	pixel_x = 5;
+	pixel_y = 9
+	},
+/obj/item/storage/box/actionfigure{
+	name = "box of Mickey-Toys";
+	pixel_x = -4;
+	pixel_y = 9
+	},
+/obj/item/storage/box/actionfigure{
+	name = "box of Mickey-Toys";
+	pixel_x = 5;
+	pixel_y = 21
+	},
+/obj/item/storage/box/actionfigure{
+	name = "box of Mickey-Toys";
+	pixel_x = -4;
+	pixel_y = 21
+	},
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "iOE" = (
@@ -9265,8 +9287,7 @@
 /obj/structure/table/countertop/red,
 /obj/machinery/light/directional/north{
 	pixel_y = 24;
-	pixel_x = -16;
-	fire_colour = "#f2e0bd"
+	pixel_x = -16
 	},
 /obj/machinery/chem_dispenser/drinks/fullupgrade/fastfood{
 	pixel_y = 10
@@ -10725,10 +10746,10 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/industrial)
 "kIG" = (
-/obj/effect/decal/cleanable/trash,
 /obj/structure/chair/darkpack/red{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/restaurant)
 "kIX" = (
@@ -11562,10 +11583,6 @@
 /obj/item/food/cheese/wedge,
 /obj/item/food/cheese/wedge,
 /obj/item/food/cheese/wedge,
-/obj/item/food/cheese/wedge,
-/obj/item/food/grown/tomato,
-/obj/item/food/grown/tomato,
-/obj/item/food/grown/tomato,
 /obj/item/food/grown/tomato,
 /obj/item/food/grown/tomato,
 /obj/item/food/grown/tomato,
@@ -15993,6 +16010,10 @@
 /obj/structure/table/countertop/red,
 /obj/machinery/light/directional/north{
 	pixel_y = 24
+	},
+/obj/machinery/processor{
+	pixel_x = 0;
+	pixel_y = 9
 	},
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
@@ -20756,6 +20777,11 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/supply)
+"uoa" = (
+/obj/effect/decal/graffiti,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "uog" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -23190,9 +23216,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
 "wXz" = (
-/obj/machinery/light/directional/west{
-	fire_colour = "#f2e0bd"
-	},
+/obj/machinery/light/directional/west,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
@@ -23791,8 +23815,7 @@
 	pixel_y = 19
 	},
 /obj/machinery/light/directional/north{
-	pixel_y = 24;
-	fire_colour = "#f2e0bd"
+	pixel_y = 24
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/city/bacotell,
@@ -47890,7 +47913,7 @@ dqD
 dqD
 dqD
 dqD
-dqD
+fgd
 dqD
 dqD
 dqD
@@ -48034,13 +48057,13 @@ ncp
 sAa
 ncp
 reE
+fgd
 dqD
 dqD
 dqD
 dqD
 dqD
-dqD
-dqD
+fgd
 dqD
 dqD
 dqD
@@ -48189,7 +48212,7 @@ reE
 dqD
 dqD
 dqD
-dqD
+fgd
 uex
 dqD
 dqD
@@ -48497,7 +48520,7 @@ bfS
 yak
 llg
 bfS
-dqD
+fgd
 dqD
 kZi
 smg
@@ -49254,7 +49277,7 @@ dqD
 sjD
 qjN
 dqD
-dqD
+fgd
 dqD
 pdC
 dqD
@@ -49406,10 +49429,10 @@ dqD
 uex
 dqD
 dqD
+kJT
 dqD
 dqD
-dqD
-dqD
+fgd
 dqD
 jbI
 gju
@@ -49554,11 +49577,11 @@ ezD
 jEq
 ncp
 reE
-dqD
+uoa
 dqD
 uex
+fgd
 dqD
-kJT
 dqD
 uex
 dqD
@@ -49705,7 +49728,7 @@ ktu
 sVo
 sVo
 sVo
-iYq
+hpn
 dqD
 dqD
 dqD
@@ -49846,7 +49869,7 @@ dqD
 dqD
 fxx
 ejk
-dqD
+fgd
 xDd
 xDd
 xDd
@@ -50166,7 +50189,7 @@ wti
 cRy
 dgR
 sRs
-neZ
+mys
 tXO
 xDd
 kUk
@@ -50184,7 +50207,7 @@ but
 but
 but
 but
-dqD
+cXA
 dqD
 dqD
 twO
@@ -50476,8 +50499,8 @@ xDd
 lVN
 dqD
 dqD
-kJT
 dqD
+kJT
 qHD
 tSx
 dvu
@@ -50627,7 +50650,7 @@ fjU
 xDd
 fOJ
 dqD
-dqD
+uex
 dqD
 dqD
 qHD
@@ -50780,7 +50803,7 @@ xDd
 fOJ
 sNz
 dqD
-dqD
+uex
 dqD
 qHD
 iJz
@@ -50931,8 +50954,8 @@ odb
 xDd
 xDd
 xDd
-kJT
-uex
+dqD
+dqD
 dqD
 but
 but
@@ -51235,8 +51258,8 @@ cRy
 cRy
 cRy
 vBq
-dqD
-dqD
+uex
+kJT
 kkJ
 qHD
 rRu
@@ -51389,7 +51412,7 @@ aDd
 xDd
 dqD
 dqD
-kJT
+uex
 qHD
 lRs
 hOG
