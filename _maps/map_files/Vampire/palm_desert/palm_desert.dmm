@@ -567,7 +567,9 @@
 	dir = 1;
 	color = "#CD5C5C"
 	},
-/obj/machinery/light/directional/south,
+/obj/machinery/light/directional/south{
+	fire_colour = "#f2e0bd"
+	},
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "aDg" = (
@@ -1412,6 +1414,10 @@
 "buk" = (
 /obj/structure/table/countertop/red,
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/processor{
+	pixel_x = 0;
+	pixel_y = 9
+	},
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
 "but" = (
@@ -9259,7 +9265,8 @@
 /obj/structure/table/countertop/red,
 /obj/machinery/light/directional/north{
 	pixel_y = 24;
-	pixel_x = -16
+	pixel_x = -16;
+	fire_colour = "#f2e0bd"
 	},
 /obj/machinery/chem_dispenser/drinks/fullupgrade/fastfood{
 	pixel_y = 10
@@ -9958,8 +9965,7 @@
 /turf/open/floor/wood/herring,
 /area/vtm/palm_desert/interior/townhall)
 "kcy" = (
-/obj/structure/table/countertop/red,
-/obj/machinery/processor,
+/obj/machinery/smartfridge/drying,
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
 "kcM" = (
@@ -23184,7 +23190,9 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
 "wXz" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/light/directional/west{
+	fire_colour = "#f2e0bd"
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
@@ -23783,7 +23791,8 @@
 	pixel_y = 19
 	},
 /obj/machinery/light/directional/north{
-	pixel_y = 24
+	pixel_y = 24;
+	fire_colour = "#f2e0bd"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/city/bacotell,
