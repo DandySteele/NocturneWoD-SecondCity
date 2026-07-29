@@ -273,3 +273,16 @@
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/obj/structure/reagent_dispensers/water_cooler/jugless = 1, /obj/item/reagent_containers/cooler_jug/punch = 1)
 	crate_name = "punch cooler crate"
+
+/datum/supply_pack/service/cooking/equipment
+	name = "Cooking Equipment Crate"
+	desc = "A crate full of cooking equipment for you to cook with."
+	cost = CARGO_CRATE_VALUE * 30
+	contains = list(/obj/machinery/griddle,
+					/obj/machinery/oven,
+					/obj/machinery/stove,
+					/obj/machinery/deepfryer,
+					/obj/machinery/processor,
+					/obj/machinery/reagentgrinder
+				)
+	crate_name = "cooking equipment crate"
