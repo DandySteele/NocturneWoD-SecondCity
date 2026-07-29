@@ -330,7 +330,7 @@
 	contains = list(/obj/machinery/jukebox)
 	crate_name = "jukebox crate"
 
-	/datum/supply_pack/service/CookingEquipment
+/datum/supply_pack/service/kitchen
 	name = "Cooking Equipment Crate"
 	desc = "A crate full of cooking equipment for your kitchen."
 	cost = CARGO_CRATE_VALUE * 25
@@ -338,7 +338,7 @@
 					/obj/machinery/oven,
 					/obj/machinery/stove,
 					/obj/machinery/deepfryer,
-					/obj/machinery/foodprocessor,
+					/obj/machinery/processor,
 					/obj/machinery/reagentgrinder
 
 				)
