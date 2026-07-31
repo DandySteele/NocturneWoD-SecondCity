@@ -592,31 +592,6 @@
 /obj/structure/roadsign/parking,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/industrial)
-"aEb" = (
-/obj/structure/table/countertop/bacotell,
-/obj/structure/fluff/tv/order/one{
-	pixel_y = 40;
-	pixel_x = -32;
-	layer = 4.1
-	},
-/obj/structure/fluff/tv/order/two{
-	pixel_y = 40;
-	pixel_x = -16;
-	layer = 4.1
-	},
-/obj/structure/fluff/tv/order/three{
-	pixel_y = 40;
-	layer = 4.1
-	},
-/obj/structure/fluff/tv/order/four{
-	pixel_y = 40;
-	pixel_x = 16;
-	layer = 4.1
-	},
-/obj/structure/platform/lowwall/brick_old,
-/obj/effect/decal/wallpaper/red/low,
-/turf/open/floor/city/bacotell,
-/area/vtm/palm_desert/interior/restaurant)
 "aEl" = (
 /obj/structure/table/countertop/teal,
 /obj/item/storage/fancy/coffee_condi_display{
@@ -981,7 +956,22 @@
 /area/vtm/palm_desert/interior/townhall)
 "aRC" = (
 /obj/item/kirbyplants/random,
-/obj/structure/noticeboard/directional/north,
+/obj/structure/fluff/tv/order/two{
+	pixel_y = 26;
+	pixel_x = 8
+	},
+/obj/structure/fluff/tv/order/one{
+	pixel_y = 26;
+	pixel_x = -9
+	},
+/obj/structure/fluff/tv/order/four{
+	pixel_y = 42;
+	pixel_x = 8
+	},
+/obj/structure/fluff/tv/order/three{
+	pixel_y = 42;
+	pixel_x = -9
+	},
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "aRI" = (
@@ -1061,9 +1051,9 @@
 /obj/effect/decal/cleanable/vomit/old,
 /obj/structure/sign/warning/no_smoking{
 	pixel_y = 32;
-	layer = 2.8;
 	pixel_x = 16
 	},
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/city/toilet,
 /area/vtm/palm_desert/interior/restaurant)
 "aWh" = (
@@ -5447,6 +5437,7 @@
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/noticeboard/directional/north,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "fvs" = (
@@ -8002,6 +7993,23 @@
 	icon_state = "stone8"
 	},
 /area/vtm/interior/caves)
+"ieg" = (
+/obj/structure/table/wood/bar,
+/obj/underplate{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/obj/item/reagent_containers/condiment/peppermill{
+	pixel_y = 6;
+	pixel_x = 2
+	},
+/obj/item/reagent_containers/condiment/saltshaker{
+	pixel_y = 6;
+	pixel_x = -2
+	},
+/obj/effect/decal/cleanable/litter,
+/turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/palm_desert/interior/restaurant)
 "ieX" = (
 /obj/structure/table/optable,
 /obj/effect/decal/cleanable/blood,
@@ -8286,9 +8294,9 @@
 /area/vtm/interior/ghetto)
 "iqk" = (
 /obj/structure/closet/crate/dumpster{
-	pixel_y = 13;
+	pixel_y = 5;
 	anchored = 1;
-	layer = 3.0
+	pixel_x = 0
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
@@ -9935,6 +9943,7 @@
 /area/vtm/interior/caves)
 "jYc" = (
 /obj/structure/table/wood/bar,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/restaurant)
 "jZk" = (
@@ -12246,6 +12255,8 @@
 	pixel_y = 6;
 	pixel_x = 2
 	},
+/obj/effect/decal/cleanable/wrapping,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "mbj" = (
@@ -12356,31 +12367,6 @@
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/outside/commercial)
-"mfR" = (
-/obj/structure/table/countertop/bacotell,
-/obj/structure/fluff/tv/order/four{
-	pixel_y = 40;
-	pixel_x = 16;
-	layer = 4.1
-	},
-/obj/structure/fluff/tv/order/three{
-	pixel_y = 40;
-	layer = 4.1
-	},
-/obj/structure/fluff/tv/order/two{
-	pixel_y = 40;
-	pixel_x = -16;
-	layer = 4.1
-	},
-/obj/structure/fluff/tv/order/one{
-	pixel_y = 40;
-	pixel_x = -32;
-	layer = 4.1
-	},
-/obj/structure/platform/lowwall/brick_old,
-/obj/effect/decal/wallpaper/red/low,
-/turf/open/floor/city/bacotell,
-/area/vtm/palm_desert/interior/restaurant)
 "mgB" = (
 /turf/open/floor/wood/ornate,
 /area/vtm/palm_desert/interior/townhall)
@@ -15266,14 +15252,14 @@
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/millennium)
 "paV" = (
-/obj/structure/fluff/retail{
-	dir = 1;
-	pixel_y = 6;
-	layer = 4.1
-	},
 /obj/structure/table/countertop/bacotell,
 /obj/structure/platform/lowwall/brick_old,
 /obj/effect/decal/wallpaper/red/low,
+/obj/structure/fluff/retail{
+	dir = 1;
+	pixel_y = 1;
+	pixel_x = 0
+	},
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "pbb" = (
@@ -18028,6 +18014,10 @@
 	icon_state = "stone8"
 	},
 /area/vtm/palm_desert/interior/anarch)
+"rsU" = (
+/obj/effect/landmark/start/darkpack/chef,
+/turf/open/floor/city/bacotell,
+/area/vtm/palm_desert/interior/restaurant)
 "rsW" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/theatre)
@@ -18690,15 +18680,10 @@
 "sfP" = (
 /obj/structure/fluff/retail{
 	dir = 1;
-	pixel_y = 6;
-	layer = 4.1
+	pixel_y = 1;
+	pixel_x = 0
 	},
 /obj/structure/table/countertop/bacotell,
-/obj/structure/sign/city/order{
-	pixel_y = 36;
-	pixel_x = 8;
-	layer = 4.1
-	},
 /obj/structure/platform/lowwall/brick_old,
 /obj/effect/decal/wallpaper/red/low,
 /turf/open/floor/city/bacotell,
@@ -20498,6 +20483,7 @@
 	pixel_x = -2
 	},
 /obj/effect/decal/cleanable/wrapping,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
 "tXQ" = (
@@ -21367,11 +21353,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/xxx_store)
-"uTW" = (
-/obj/structure/platform/lowwall/painted/window,
-/obj/effect/decal/wallpaper/light/low,
-/turf/open/space/basic,
-/area/vtm/palm_desert/interior/restaurant)
 "uUe" = (
 /obj/structure/platform/lowwall/brick/window,
 /obj/effect/decal/wallpaper/paper/darkgreen/low,
@@ -21689,6 +21670,13 @@
 /obj/structure/lattice/catwalk/borderless,
 /turf/open/openspace,
 /area/vtm/palm_desert)
+"vpB" = (
+/obj/structure/sign/city/order{
+	pixel_y = 23;
+	pixel_x = 0
+	},
+/turf/open/floor/city/bacotell,
+/area/vtm/palm_desert/interior/restaurant)
 "vpJ" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -22293,7 +22281,6 @@
 /area/vtm/interior/sewer)
 "vXA" = (
 /obj/machinery/light/directional/south,
-/obj/machinery/light/directional/south,
 /obj/structure/rack/tall/metal_shelf,
 /obj/item/storage/box/papersack,
 /obj/item/storage/box/papersack,
@@ -22483,6 +22470,7 @@
 	pixel_x = 12
 	},
 /obj/structure/table/wood/bar,
+/obj/effect/decal/cleanable/wrapping,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/restaurant)
 "wjr" = (
@@ -50188,7 +50176,7 @@ dqD
 kjM
 nHs
 dqD
-uTW
+jJK
 nZN
 cRy
 cRy
@@ -50196,13 +50184,13 @@ oSO
 neZ
 fRi
 neZ
-fRW
-aEb
+roW
+fwD
 roW
 wti
 cRy
 dgR
-sRs
+ieg
 mys
 tXO
 xDd
@@ -50340,7 +50328,7 @@ dqD
 kjM
 rAd
 ebz
-uTW
+jJK
 pvp
 cRy
 jNu
@@ -50348,9 +50336,9 @@ cRy
 neZ
 sle
 neZ
-neZ
+rsU
 sfP
-neZ
+vpB
 wti
 cRy
 odb
@@ -50653,7 +50641,7 @@ neZ
 uwQ
 neZ
 neZ
-mfR
+fwD
 roW
 wti
 cRy
@@ -50806,7 +50794,7 @@ nHK
 fvd
 fRW
 paV
-neZ
+vpB
 wti
 cRy
 maj
