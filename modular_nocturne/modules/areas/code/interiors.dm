@@ -170,3 +170,11 @@
 	ambience_index = AMBIENCE_ARCADE
 	fire_controled = TRUE
 	show_area_name = TRUE
+
+/area/vtm/palm_desert/interior/bathroom
+	name = "\improper Public Restroom"
+	icon = 'modular_darkpack/modules/westfield_mall/icons/mall_areas.dmi'
+	icon_state = "pooper"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	show_area_name = TRUE
