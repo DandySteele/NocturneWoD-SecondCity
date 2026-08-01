@@ -38,6 +38,11 @@
 	/// Number of successes needed to bash down
 	var/bash_successes_needed = 1
 
+	// NOCTURNE ADDITION START
+	var/has_deadbolt = FALSE
+	var/deadbolt_direction = NORTH
+	// NOCTURNE ADDITION END
+
 /obj/structure/vampdoor/Initialize(mapload)
 	. = ..()
 
@@ -92,6 +97,13 @@
 		var/odds = value ? clamp((value/max_rand_value), 0, 1) : 0
 		. += span_notice("As an expert in lockpicking, you estimate that you have a [round(odds*100, 1)]% chance to lockpick this door successfully.")
 */
+
+// NOCTURNE ADDITION START
+/obj/structure/vampdoor/examine(mob/user)
+	. = ..()
+	if(has_deadbolt)
+		. += span_notice("This door has a deadbolt.")
+// NOCTURNE ADDITION END
 
 /obj/structure/vampdoor/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
@@ -261,6 +273,32 @@
 					to_chat(user, span_danger("You hurt your shoulder by punching the door!"))
 					human_user.adjust_brute_loss(1 LETHAL_TTRPG_DAMAGE, user.get_active_hand())
 					addtimer(CALLBACK(src, PROC_REF(reset_transform)), 2)
+	else
+		var/has_keys = FALSE
+		for(var/obj/item/vamp/keys/found_key in user)
+			// check if we already set has_keys so the first key you try and no do_after.
+			if(has_keys && !do_after(user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
+				return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+			has_keys = TRUE
+			if(try_keys(user, found_key))
+				return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+		if(ishuman(user))
+			var/mob/living/carbon/human/human_user = user
+			if(human_user.back)
+				for(var/obj/item/vamp/keys/found_key in human_user.back)
+					if(!do_after(human_user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
+						return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+					has_keys = TRUE
+					if(try_keys(user, found_key))
+						return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+		if(lock_id == LOCKACCESS_ALL)
+			if(try_keys(user, need_key = FALSE))
+				return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+		if(!has_keys)
+			to_chat(user, span_warning("You need a key to lock/unlock this door!"))
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	*/ // NOCTURNE REMOVAL END
 
 	// NOCTURNE ADDITION START
@@ -297,33 +335,40 @@
 						addtimer(CALLBACK(src, PROC_REF(reset_transform)), 2)
 			else
 				to_chat(human_user, span_danger("You must be standing next to the door to break it down."))
-	// NOCTURNE ADDITION END
 	else
-		var/has_keys = FALSE
-		for(var/obj/item/vamp/keys/found_key in user)
-			// check if we already set has_keys so the first key you try and no do_after.
-			if(has_keys && !do_after(user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
-				return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-			has_keys = TRUE
-			if(try_keys(user, found_key))
-				return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-		if(ishuman(user))
-			var/mob/living/carbon/human/human_user = user
-			if(human_user.back)
-				for(var/obj/item/vamp/keys/found_key in human_user.back)
-					if(!do_after(human_user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
-						return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-					has_keys = TRUE
-					if(try_keys(user, found_key))
-						return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+		if(has_deadbolt)
+			if(get_dir(src, user) == deadbolt_direction)
+				toggle_lock(user)
+			else
+				to_chat(user, span_warning("The deadbolt doesn't toggle from this side."))
+			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+		else
+			var/has_keys = FALSE
+			for(var/obj/item/vamp/keys/found_key in user)
+				// check if we already set has_keys so the first key you try and no do_after.
+				if(has_keys && !do_after(user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
+					return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+				has_keys = TRUE
+				if(try_keys(user, found_key))
+					return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+			if(ishuman(user))
+				var/mob/living/carbon/human/human_user = user
+				if(human_user.back)
+					for(var/obj/item/vamp/keys/found_key in human_user.back)
+						if(!do_after(human_user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
+							return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+						has_keys = TRUE
+						if(try_keys(user, found_key))
+							return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
-		if(lock_id == LOCKACCESS_ALL)
-			if(try_keys(user, need_key = FALSE))
-				return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+			if(lock_id == LOCKACCESS_ALL)
+				if(try_keys(user, need_key = FALSE))
+					return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
-		if(!has_keys)
-			to_chat(user, span_warning("You need a key to lock/unlock this door!"))
-		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+			if(!has_keys)
+				to_chat(user, span_warning("You need a key to lock/unlock this door!"))
+			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	// NOCTURNE ADDITION END
 
 /obj/structure/vampdoor/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/door_repair_kit))
