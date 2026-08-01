@@ -31,8 +31,8 @@
 	var/close_sound = 'modular_darkpack/modules/doors/sounds/door_close.ogg'
 	var/lock_sound = 'modular_darkpack/modules/doors/sounds/door_locked.ogg'
 	var/burnable = FALSE
-	var/datum/storyteller_roll/lockpick/lockpick_roll
-	var/datum/storyteller_roll/bash_door/bash_roll
+	// var/datum/storyteller_roll/lockpick/lockpick_roll // NOCTURNE REMOVAL
+	// var/datum/storyteller_roll/bash_door/bash_roll // NOCTURNE REMOVAL
 	/// Difficulty for bashing this door down
 	var/bash_difficulty = 6
 	/// Number of successes needed to bash down
@@ -99,7 +99,11 @@
 		var/mob/living/living_user = user
 		if(living_user?.combat_mode)
 			context[SCREENTIP_CONTEXT_LMB] = "Knock"
-			context[SCREENTIP_CONTEXT_RMB] = "Bash"
+			// context[SCREENTIP_CONTEXT_RMB] = "Bash" // NOCTURNE REMOVAL
+			// NOCTURNE ADDITION START
+			if(HAS_TRAIT(living_user, TRAIT_COP_LEGS))
+				context[SCREENTIP_CONTEXT_RMB] = "Bash"
+			// NOCTURNE ADDITION END
 		else
 			context[SCREENTIP_CONTEXT_LMB] = closed ? "Open" : "Close"
 			context[SCREENTIP_CONTEXT_RMB] = locked ? "Unlock" : "Lock"
@@ -224,7 +228,7 @@
 	if(door_broken)
 		to_chat(user, span_warning("There is no door to use here."))
 		return
-	/* // NOCTURNE REMOVAL - BASHING IS TOO CRAZY
+	/* // NOCTURNE REMOVAL START
 	var/mob/living/living_user = user
 	if(living_user.combat_mode)
 		if(ishuman(user))
@@ -257,6 +261,43 @@
 					to_chat(user, span_danger("You hurt your shoulder by punching the door!"))
 					human_user.adjust_brute_loss(1 LETHAL_TTRPG_DAMAGE, user.get_active_hand())
 					addtimer(CALLBACK(src, PROC_REF(reset_transform)), 2)
+	*/ // NOCTURNE REMOVAL END
+
+	// NOCTURNE ADDITION START
+	var/mob/living/living_user = user
+	if(living_user.combat_mode && HAS_TRAIT(living_user, TRAIT_COP_LEGS))
+		if(ishuman(user))
+			var/mob/living/carbon/human/human_user = user
+
+			to_chat(human_user, span_danger("You wind up a big punch to break down the door..."))
+			if(do_after(human_user, 1 TURNS, src))
+				var/datum/storyteller_roll/bash_door/bash_roll = new()
+				bash_roll.difficulty = bash_difficulty
+				bash_roll.successes_needed = bash_successes_needed
+
+				var/roll = bash_roll.st_roll(user, src)
+				switch(roll)
+					if(ROLL_SUCCESS)
+						proc_unlock(50)
+						break_door(human_user)
+					if(ROLL_FAILURE)
+						pixel_z = pixel_z+rand(-1, 1)
+						pixel_w = pixel_w+rand(-1, 1)
+						playsound(get_turf(src), 'modular_darkpack/master_files/sounds/effects/door/get_bent.ogg', 50, TRUE)
+						proc_unlock(5)
+						to_chat(user, span_warning("You aren't strong enough to break it down!"))
+						addtimer(CALLBACK(src, PROC_REF(reset_transform)), 2)
+					if(ROLL_BOTCH)
+						pixel_z = pixel_z+rand(-1, 1)
+						pixel_w = pixel_w+rand(-1, 1)
+						playsound(get_turf(src), 'modular_darkpack/master_files/sounds/effects/door/get_bent.ogg', 50, TRUE)
+						proc_unlock(5)
+						to_chat(user, span_danger("You hurt your shoulder by punching the door!"))
+						human_user.adjust_brute_loss(1 LETHAL_TTRPG_DAMAGE, user.get_active_hand())
+						addtimer(CALLBACK(src, PROC_REF(reset_transform)), 2)
+			else
+				to_chat(human_user, span_danger("You must be standing next to the door to break it down."))
+	// NOCTURNE ADDITION END
 	else
 		var/has_keys = FALSE
 		for(var/obj/item/vamp/keys/found_key in user)
@@ -283,35 +324,6 @@
 		if(!has_keys)
 			to_chat(user, span_warning("You need a key to lock/unlock this door!"))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	*/ // NOCTURNE REMOVAL END
-
-	// NOCTURNE ADDITION START
-	var/has_keys = FALSE
-	for(var/obj/item/vamp/keys/found_key in user)
-		// check if we already set has_keys so the first key you try and no do_after.
-		if(has_keys && !do_after(user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
-			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-		has_keys = TRUE
-		if(try_keys(user, found_key))
-			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	if(ishuman(user))
-		var/mob/living/carbon/human/human_user = user
-		if(human_user.back)
-			for(var/obj/item/vamp/keys/found_key in human_user.back)
-				if(!do_after(human_user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
-					return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-				has_keys = TRUE
-				if(try_keys(user, found_key))
-					return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-
-	if(lock_id == LOCKACCESS_ALL)
-		if(try_keys(user, need_key = FALSE))
-			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-
-	if(!has_keys)
-		to_chat(user, span_warning("You need a key to lock/unlock this door!"))
-	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	// NOCTURNE ADDITION END
 
 /obj/structure/vampdoor/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/door_repair_kit))
@@ -344,14 +356,17 @@
 		return
 	if(locked)
 		proc_unlock(5)
-		playsound(src, 'modular_darkpack/modules/doors/sounds/hack.ogg', 100, TRUE)
+		playsound(src, 'modular_nocturne/master_files/sound/doors/hack_long.ogg', 100, TRUE) // NOCTURNE EDIT - ORIGINAL: playsound(src, 'modular_darkpack/modules/doors/sounds/hack.ogg', 100, TRUE)
 		for(var/mob/living/carbon/human/npc/police/P in oviewers(DEFAULT_SIGHT_DISTANCE, src))
 			P.Aggro(user)
-		if(do_after(user, 1 TURNS, src, interaction_key = DOAFTER_SOURCE_DOOR))
+		if(do_after(user, 3 TURNS, src, interaction_key = DOAFTER_SOURCE_DOOR)) // NOCTURNE EDIT - ORIGINAL: if(do_after(user, 1 TURNS, src, interaction_key = DOAFTER_SOURCE_DOOR))
 			if(!locked)
 				return
+			/* // NOCTURNE REMOVAL START
 			if(!lockpick_roll)
 				lockpick_roll = new()
+			*/ // NOCTURNE REMOVAL END
+			var/datum/storyteller_roll/lockpick/lockpick_roll = new() // NOCTURNE ADDITION
 			lockpick_roll.difficulty = lockpick_difficulty
 			switch(lockpick_roll.st_roll(user, src))
 				if(ROLL_SUCCESS)
