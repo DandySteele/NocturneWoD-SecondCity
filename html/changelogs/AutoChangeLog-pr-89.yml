@@ -1,0 +1,6 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - rscadd: "Added deadbolt doors"
+  - balance: "Police are now able to bash down doors"
+  - balance: "Lockpicking takes a lot longer, now"
