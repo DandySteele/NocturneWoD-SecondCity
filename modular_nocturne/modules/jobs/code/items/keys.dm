@@ -24,7 +24,8 @@
 /obj/item/vamp/keys/magadon
 	name = "\improper Autumn Health clinic keys"
 	accesslocks = list(
-		LOCKACCESS_MAGADON
+		LOCKACCESS_MAGADON,
+		LOCKACCESS_CLINIC
 	)
 	color = COLOR_CORP_MAGADON
 
@@ -32,14 +33,16 @@
 	name = "\improper " + EVIL_PHARMA_COMPANY + " security keys"
 	accesslocks = list(
 		LOCKACCESS_MAGADON,
-		LOCKACCESS_MAGADON_SECURITY
+		LOCKACCESS_MAGADON_SECURITY,
+		LOCKACCESS_CLINIC
 	)
 
 /obj/item/vamp/keys/magadon/corporate
 	name = "\improper " + EVIL_PHARMA_COMPANY + " office keys"
 	accesslocks = list(
 		LOCKACCESS_MAGADON,
-		LOCKACCESS_MAGADON_CORPORATE
+		LOCKACCESS_MAGADON_CORPORATE,
+		LOCKACCESS_CLINIC
 	)
 
 /obj/item/vamp/keys/magadon/leader
@@ -47,7 +50,8 @@
 	accesslocks = list(
 		LOCKACCESS_MAGADON,
 		LOCKACCESS_MAGADON_CORPORATE,
-		LOCKACCESS_MAGADON_SECURITY
+		LOCKACCESS_MAGADON_SECURITY,
+		LOCKACCESS_CLINIC
 	)
 
 // police
@@ -57,4 +61,22 @@
 	accesslocks = list(
 		LOCKACCESS_POLICE,
 		LOCKACCESS_DISPATCH
+	)
+
+// town hall
+
+/obj/item/vamp/keys/townhall
+	name = "town hall keys"
+	accesslocks = list(
+		LOCKACCESS_TOWNHALL,
+		LOCKACCESS_CLEANING
+	)
+	color = COLOR_GREEN_GRAY
+
+/obj/item/vamp/keys/townhall/secretary
+	name = "secretary's keys"
+	accesslocks = list(
+		LOCKACCESS_TOWNHALL,
+		LOCKACCESS_THEMAYOR,
+		LOCKACCESS_CLEANING
 	)

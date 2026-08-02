@@ -20,6 +20,7 @@
 	)
 	feature_key = FEATURE_FLUFF_NOCTURNE
 	feature_key_sprite = "fluff"
+	offset_location = UPPER_BODY
 
 /datum/bodypart_overlay/mutant/fluff/inherit_color(obj/item/bodypart/bodypart_owner, force)
 	if(isnull(bodypart_owner))

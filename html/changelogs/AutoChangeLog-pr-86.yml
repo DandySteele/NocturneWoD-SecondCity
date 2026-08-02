@@ -1,0 +1,6 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - rscadd: "Added gear harnesses as a selectable loadout item"
+  - rscadd: "Added additional items to the clothing store"
+  - bugfix: "Fixed ears being too low on tall characters"

@@ -44,3 +44,4 @@
 /datum/outfit/job/vampire/police_officer/post_equip(mob/living/carbon/human/H)
 	..()
 	H.ignores_warrant = TRUE
+	ADD_TRAIT(H, TRAIT_COP_LEGS, JOB_TRAIT) // NOCTURNE ADDITION

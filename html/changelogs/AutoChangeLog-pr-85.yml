@@ -1,0 +1,4 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - bugfix: "Fixed SSD indicator not disappearing when a player logs back in"

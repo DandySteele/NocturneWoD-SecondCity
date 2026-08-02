@@ -48,6 +48,11 @@
 		new /datum/data/vending_product("kitchen knife", /obj/item/knife, 26),
 		new /datum/data/vending_product("rolling pin", /obj/item/kitchen/rollingpin, 8),
 		new /datum/data/vending_product("mixing bowl", /obj/item/reagent_containers/cup/mixing_bowl),
+		// NOCTURNE ADDITION START
+		new /datum/data/vending_product("coffee cartridge - generic", /obj/item/coffee_cartridge, 20),
+		new /datum/data/vending_product("coffee cartridge - decaf", /obj/item/coffee_cartridge/decaf, 30),
+		new /datum/data/vending_product("coffee cartridge - fancy", /obj/item/coffee_cartridge/fancy, 40),
+		// NOCTURNE ADDITION END
 	)
 
 /obj/structure/retail/deli

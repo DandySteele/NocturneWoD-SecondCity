@@ -2,6 +2,19 @@
 	products_list = list(
 		new /datum/data/vending_product("full gas can", /obj/item/gas_can/full),
 		new /datum/data/vending_product("tire iron", /obj/item/melee/vamp/tire, 50),
+		// NOCTURNE ADDITION START
+		new /datum/data/vending_product("screwdriver", /obj/item/screwdriver, 10),
+		new /datum/data/vending_product("crowbar", /obj/item/crowbar/large, 20),
+		new /datum/data/vending_product("wrench", /obj/item/wrench, 15),
+		new /datum/data/vending_product("wirecutters", /obj/item/wirecutters, 10),
+		new /datum/data/vending_product("cable coil", /obj/item/stack/cable_coil/five, 5),
+		new /datum/data/vending_product("glass", /obj/item/stack/sheet/glass, 5),
+		new /datum/data/vending_product("plastic", /obj/item/stack/sheet/plastic, 5),
+		new /datum/data/vending_product("metal", /obj/item/stack/sheet/iron, 10),
+		new /datum/data/vending_product("Modello 3 Coffee Maker", /obj/machinery/coffeemaker, 750),
+		new /datum/data/vending_product("Soda Dispenser", /obj/machinery/chem_dispenser/drinks/fullupgrade/fastfood, 600),
+		new /datum/data/vending_product("Alcohol Dispenser", /obj/machinery/chem_dispenser/drinks/beer/fullupgrade/nocturne, 800),
+		// NOCTURNE ADDITION END
 		new /datum/data/vending_product("lockpick", /obj/item/vamp/keys/hack, 50),
 		new /datum/data/vending_product("respirator", /obj/item/clothing/mask/gas/vampire),
 		new /datum/data/vending_product("baseball bat", /obj/item/melee/baseball_bat/vamp, 200),

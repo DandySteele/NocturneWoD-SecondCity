@@ -39,6 +39,7 @@
 	var/organ_slot
 
 	draw_on_husks = FALSE
+	offset_location = ENTIRE_BODY
 
 /datum/bodypart_overlay/mutant/genital/get_base_icon_state()
 	. = ..()
