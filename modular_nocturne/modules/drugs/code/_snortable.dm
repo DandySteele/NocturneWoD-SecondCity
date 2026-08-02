@@ -33,12 +33,12 @@
 		to_chat(user, span_warning("[target] is full."))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_warning("[user] slips something into [target]!"), span_notice("You dissolve [src] in [target]."), null, 2)
+	user.visible_message(span_warning("[user] sprinkles something into [target]!"), span_notice("You dissolve [src] in [target]."), null, 2)
 	reagents.trans_to(target, reagents.total_volume, transferred_by = user)
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 
-/obj/item/reagent_containers/applicator/pill/on_accidental_consumption(mob/living/carbon/victim, mob/living/carbon/user, obj/item/source_item, discover_after = FALSE)
+/obj/item/reagent_containers/applicator/snortable/on_accidental_consumption(mob/living/carbon/victim, mob/living/carbon/user, obj/item/source_item, discover_after = FALSE)
 	to_chat(victim, span_warning("You inhale something."))
 	on_consumption(victim, user)
 	return FALSE

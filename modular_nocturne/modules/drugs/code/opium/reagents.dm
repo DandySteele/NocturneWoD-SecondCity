@@ -1,5 +1,7 @@
+// base opium class, shouldnt be used
+
 /datum/reagent/drug/opium
-	name = "Opium"
+	name = "Opiate"
 	description = "A potent painkiller and narcotic harvested from opium poppy plants."
 	color = "#fff9e6"
 	overdose_threshold = 30
@@ -46,11 +48,13 @@
 		affected_mob.set_dizzy_if_lower(4 SECONDS)
 		affected_mob.set_jitter_if_lower(4 SECONDS)
 
+// heroin, stronger than morphine
+
 /datum/reagent/drug/opium/heroin
 	name = "Heroin"
 	description = "A potent opioid narcotic. Heroin is an acetylated form of morphine, with effects about one and a half times more potent."
 	color = "#c0af95"
-	overdose_threshold = 20
+	overdose_threshold = 15
 	ph = 7.4
 	addiction_types = list(/datum/addiction/opioids = 10)
 	strength_mod = 1.5
@@ -63,9 +67,55 @@
 	. = ..()
 	affected_mob.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
+// codeine, weaker than morphine. also surpresses coughs
+
 /datum/reagent/drug/opium/codeine
 	name = "Codeine"
 	description = "An opioid commonly used as a treatment for pain and coughing. About half as potent as morphine."
 	overdose_threshold = 30
 	ph = 8.9
 	strength_mod = 0.5
+
+/datum/reagent/drug/opium/codeine/on_mob_life(mob/living/affected_mob, seconds_per_tick, metabolization_ratio)
+	. = ..()
+	affected_mob.apply_status_effect(/datum/status_effect/throat_soothed)
+
+
+// chemical reactions
+
+// morphine -> heroin: boil morphine with acetic anhydride
+// potassium + chlorine is a horrible approximation of acetic ahydride
+/datum/chemical_reaction/heroin
+	results = list(/datum/reagent/drug/opium/heroin = 1)
+	required_reagents = list(/datum/reagent/medicine/morphine = 1, /datum/reagent/potassium = 1, /datum/reagent/chlorine = 1)
+	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_DRUG
+	required_temp = 400
+	thermic_constant = 50
+
+// heroin -> powder heroin: IDFK, this is completely made up
+// i guess its just dehydrating it???
+/datum/chemical_reaction/powder_heroin
+	required_reagents = list(/datum/reagent/drug/opium/heroin = 10)
+	required_catalysts = list(/datum/reagent/acetone = 5)
+	required_temp = 350
+
+	reaction_flags = REACTION_INSTANT
+	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_DRUG
+	mob_react = FALSE
+
+/datum/chemical_reaction/powder_heroin/on_reaction(datum/reagents/holder, datum/equilibrium/reaction, created_volume)
+	var/location = get_turf(holder.my_atom)
+	for(var/i in 1 to round(created_volume, CHEMICAL_VOLUME_ROUNDING))
+		new /obj/item/reagent_containers/applicator/snortable/heroin(location)
+
+
+// morphine -> codeine: https://patents.google.com/patent/US6204337B1/en
+// "Morphine is usually first dissolved in absolute ethanol and then added to the solution of [trimethylanilinium salt]
+// in [thoxide, chloride or hydroxide]. Ethanol is distilled out during the reaction."
+/datum/chemical_reaction/codeine
+	results = list(/datum/reagent/drug/opium/codeine = 1)
+	required_reagents = list(/datum/reagent/medicine/morphine = 1, /datum/reagent/consumable/ethanol = 1)
+	required_catalysts = list(/datum/reagent/chlorine = 1) // closest thing to chloride
+	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_DRUG
+	required_temp = 400
+	thermic_constant = 50

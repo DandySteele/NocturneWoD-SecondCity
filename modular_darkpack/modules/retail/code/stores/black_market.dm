@@ -17,7 +17,7 @@
 		new /datum/data/vending_product("Black bag", /obj/item/clothing/head/vampire/blackbag, 50),
 		new /datum/data/vending_product("snub-nose revolver", /obj/item/gun/ballistic/revolver/darkpack/snub, 100),
 		new /datum/data/vending_product("cannabis package", /obj/item/storage/box/baggie/weed, 700), // NOCTURNE EDIT - ORIGINAL: new /datum/data/vending_product("cannabis package", /obj/item/food/grown/cannabis, 700),
-		new /datum/data/vending_product("morphine syringe", /obj/item/reagent_containers/syringe/contraband/morphine, 800),
+		new /datum/data/vending_product("heroin package", /obj/item/storage/box/baggie/heroin, 800), // NOCTURNE EDIT - ORIGINAL: new /datum/data/vending_product("morphine syringe", /obj/item/reagent_containers/syringe/contraband/morphine, 800),
 		new /datum/data/vending_product("meth package", /obj/item/storage/box/baggie/meth, 800), // NOCTURNE EDIT - ORIGINAL: new /datum/data/vending_product("meth package", /obj/item/reagent_containers/cup/glass/baggie/meth, 800),
 		new /datum/data/vending_product("cocaine package", /obj/item/storage/box/baggie/cocaine, 800), // NOCTURNE EDIT - ORIGINAL: new /datum/data/vending_product("cocaine package", /obj/item/reagent_containers/cup/glass/baggie/meth/cocaine, 800),
 		new /datum/data/vending_product("silver 9mm ammo", /obj/item/ammo_box/darkpack/c9mm/silver, 5000),
