@@ -17,3 +17,8 @@
 
 	spawn_count = 3
 	spawn_type = /obj/item/reagent_containers/applicator/snortable/heroin
+
+/obj/item/reagent_containers/cup/bottle/codeine
+	name = "cough medication bottle"
+	desc = "A small bottle of codeine."
+	list_reagents = list(/datum/reagent/drug/opium/codeine = 30)
