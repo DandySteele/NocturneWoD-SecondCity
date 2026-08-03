@@ -23648,8 +23648,8 @@
 /area/vtm/palm_desert/interior/millennium)
 "xxy" = (
 /obj/structure/vampdoor/simple,
-/obj/effect/mapping_helpers/door/unlock,
 /obj/effect/mapping_helpers/door/autoname,
+/obj/effect/mapping_helpers/door/deadbolt/north,
 /turf/open/floor/city/toilet,
 /area/vtm/palm_desert/interior/bathroom)
 "xxD" = (
