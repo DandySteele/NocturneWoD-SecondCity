@@ -77,8 +77,6 @@
 		JOB_POLICE_OFFICER,
 		JOB_EMERGENCY_DISPATCHER,
 		JOB_FEDERAL_INVESTIGATOR,
-		JOB_NATIONAL_GUARD,
-		JOB_POLICE_SWAT,
 	)
 	var/rejection_message = "You aren't approved to fill this out!"
 
