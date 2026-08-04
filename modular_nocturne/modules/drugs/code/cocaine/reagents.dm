@@ -64,7 +64,7 @@
 	required_temp = 350
 
 	reaction_flags = REACTION_INSTANT
-	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_DRUG | REACTION_TAG_ORGAN
+	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_DRUG
 	mob_react = FALSE
 
 /datum/chemical_reaction/powder_cocaine/on_reaction(datum/reagents/holder, datum/equilibrium/reaction, created_volume)
