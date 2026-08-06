@@ -9681,7 +9681,6 @@
 	pixel_y = 15;
 	pixel_x = 7
 	},
-/obj/effect/landmark/start/darkpack/sabbat/sabbatist,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/sabbat_lair)
 "jGM" = (
@@ -16976,10 +16975,6 @@
 /obj/structure/roadsign/parking,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
-"qwx" = (
-/obj/effect/landmark/start/darkpack/sabbat/sabbatist,
-/turf/open/floor/wood/smooth/old,
-/area/vtm/interior/sabbat_lair)
 "qwM" = (
 /obj/item/stack/dollar/thousand,
 /obj/item/stack/dollar/thousand{
@@ -32648,7 +32643,7 @@ mPd
 kKo
 mPd
 vul
-qwx
+ipi
 ipi
 xnG
 mPd
@@ -32952,7 +32947,7 @@ mPd
 kKo
 mPd
 xnG
-qwx
+ipi
 ipi
 bWy
 mPd
@@ -33104,8 +33099,8 @@ mPd
 nDJ
 mPd
 fpx
-qwx
-qwx
+ipi
+ipi
 mPd
 mPd
 kKo
