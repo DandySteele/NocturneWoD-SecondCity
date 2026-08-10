@@ -52,6 +52,13 @@
 	contains = list(/obj/item/stack/sheet/mineral/wood/fifty)
 	crate_name = "wood planks crate"
 
+/datum/supply_pack/materials/cloth50
+	name = "50 Cloth Squares"
+	desc = "Create a bunch of clothing and other textile items."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/stack/sheet/cloth/fifty)
+	crate_name = "cloth squares crate"
+
 /datum/supply_pack/materials/foamtank
 	name = "Firefighting Foam Tank Crate"
 	desc = "Contains a tank of firefighting foam. Also known as \"plasmaman's bane.\""
