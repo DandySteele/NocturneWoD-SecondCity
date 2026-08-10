@@ -7,7 +7,8 @@
 	cost = CARGO_CRATE_VALUE * 2
 	contains = list(/obj/item/vending_refill/boozeomat,
 					/obj/item/vending_refill/coffee,
-				)
+				/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "bartending supply crate"
 
 /datum/supply_pack/vending/cigarette
@@ -15,7 +16,8 @@
 	desc = "Don't believe the reports - smoke today! Contains a \
 		cigarette vending machine refill."
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/cigarette)
+	contains = list(/obj/item/vending_refill/cigarette,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "cigarette supply crate"
 	crate_type = /obj/structure/closet/crate/robust
 
@@ -23,35 +25,40 @@
 	name = "Cytology Vendor Supply Crate"
 	desc = "For all your vat-growing needs! Contains a CytoPro machine refill."
 	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/vending_refill/cytopro)
+	contains = list(/obj/item/vending_refill/cytopro,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "cytopro supply crate"
 
 /datum/supply_pack/vending/dinnerware
 	name = "Dinnerware Supply Crate"
 	desc = "More knives for the chef."
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/dinnerware)
+	contains = list(/obj/item/vending_refill/dinnerware,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "dinnerware supply crate"
 
 /datum/supply_pack/vending/science/modularpc
 	name = "Deluxe Silicate Selections Restock"
 	desc = "What's a computer? Contains a Deluxe Silicate Selections restocking unit."
 	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/vending_refill/modularpc)
+	contains = list(/obj/item/vending_refill/modularpc,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "computer supply crate"
 
 /datum/supply_pack/vending/engivend
 	name = "EngiVend Supply Crate"
 	desc = "The engineers are out of metal foam grenades? This should help."
 	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/vending_refill/engivend)
+	contains = list(/obj/item/vending_refill/engivend,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "engineering supply crate"
 
 /datum/supply_pack/vending/games
 	name = "Games Supply Crate"
 	desc = "Get your game on with this game vending machine refill."
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/games)
+	contains = list(/obj/item/vending_refill/games,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "games supply crate"
 	crate_type = /obj/structure/closet/crate
 
@@ -63,6 +70,8 @@
 	crate_type = /obj/structure/closet/crate
 	contains = list(/obj/item/vending_refill/hydroseeds,
 					/obj/item/vending_refill/hydronutrients,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "hydroponics supply crate"
 
@@ -74,6 +83,10 @@
 					/obj/item/vending_refill/robotics,
 					/obj/item/vending_refill/sovietsoda,
 					/obj/item/vending_refill/engineering,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "unlabeled supply crate"
 
@@ -85,6 +98,9 @@
 	contains = list(/obj/item/vending_refill/medical,
 					/obj/item/vending_refill/drugs,
 					/obj/item/vending_refill/wallmed,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "medical vending crate"
 
@@ -93,7 +109,8 @@
 	desc = "Not enough cartridges after half the crew lost their PDA \
 		to explosions? This may fix it."
 	cost = CARGO_CRATE_VALUE * 2.5
-	contains = list(/obj/item/vending_refill/cart)
+	contains = list(/obj/item/vending_refill/cart,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "\improper PTech supply crate"
 
 /datum/supply_pack/vending/sectech
@@ -102,7 +119,8 @@
 		vendor with this crate."
 	cost = CARGO_CRATE_VALUE * 3
 	access = ACCESS_SECURITY
-	contains = list(/obj/item/vending_refill/security)
+	contains = list(/obj/item/vending_refill/security,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "\improper SecTech supply crate"
 	crate_type = /obj/structure/closet/crate/secure/gear
 
@@ -111,7 +129,8 @@
 	desc = "One vending machine refill of cavity-bringin' goodness! \
 		The number one dentist recommended order!"
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/snack)
+	contains = list(/obj/item/vending_refill/snack,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "snacks supply crate"
 	crate_type = /obj/structure/closet/crate/robust
 
@@ -120,7 +139,8 @@
 	desc = "Got whacked by a toolbox, but you still have those pesky teeth? \
 		Get rid of those pearly whites with this soda machine refill, today!"
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/cola)
+	contains = list(/obj/item/vending_refill/cola,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "soft drinks supply crate"
 
 /datum/supply_pack/vending/vendomat
@@ -129,6 +149,8 @@
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/vending_refill/assist,
 					/obj/item/vending_refill/youtool,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "\improper Part-Mart & YouTool supply crate"
 
@@ -136,7 +158,8 @@
 	name = "ClothesMate Supply Crate"
 	desc = "Out of cowboy boots? Buy this crate."
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/clothing)
+	contains = list(/obj/item/vending_refill/clothing,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "\improper ClothesMate supply crate"
 
 
@@ -147,14 +170,16 @@
 	desc = "Autodrobe missing your favorite dress? Solve that issue today \
 		with this autodrobe refill."
 	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/vending_refill/autodrobe)
+	contains = list(/obj/item/vending_refill/autodrobe,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "autodrobe supply crate"
 
 /datum/supply_pack/vending/wardrobes/cargo
 	name = "Cargo Wardrobe Supply Crate"
 	desc = "This crate contains a refill for the CargoDrobe."
 	cost = CARGO_CRATE_VALUE * 1.5
-	contains = list(/obj/item/vending_refill/wardrobe/cargo_wardrobe)
+	contains = list(/obj/item/vending_refill/wardrobe/cargo_wardrobe,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "cargo department supply crate"
 
 /datum/supply_pack/vending/wardrobes/engineering
@@ -163,6 +188,8 @@
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/vending_refill/wardrobe/engi_wardrobe,
 					/obj/item/vending_refill/wardrobe/atmos_wardrobe,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "engineering department wardrobe supply crate"
 
@@ -175,6 +202,10 @@
 					/obj/item/vending_refill/wardrobe/bar_wardrobe,
 					/obj/item/vending_refill/wardrobe/chef_wardrobe,
 					/obj/item/vending_refill/wardrobe/chap_wardrobe,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "general wardrobes vendor refills"
 
@@ -182,14 +213,16 @@
 	name = "Hydrobe Supply Crate"
 	desc = "This crate contains a refill for the Hydrobe."
 	cost = CARGO_CRATE_VALUE * 1.5
-	contains = list(/obj/item/vending_refill/wardrobe/hydro_wardrobe)
+	contains = list(/obj/item/vending_refill/wardrobe/hydro_wardrobe,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "hydrobe supply crate"
 
 /datum/supply_pack/vending/wardrobes/janitor
 	name = "JaniDrobe Supply Crate"
 	desc = "This crate contains a refill for the JaniDrobe."
 	cost = CARGO_CRATE_VALUE * 1.5
-	contains = list(/obj/item/vending_refill/wardrobe/jani_wardrobe)
+	contains = list(/obj/item/vending_refill/wardrobe/jani_wardrobe,
+	/obj/item/circuitboard/machine/vendor)
 	crate_name = "janidrobe supply crate"
 
 /datum/supply_pack/vending/wardrobes/medical
@@ -201,6 +234,10 @@
 					/obj/item/vending_refill/wardrobe/chem_wardrobe,
 					/obj/item/vending_refill/wardrobe/viro_wardrobe,
 					/obj/item/vending_refill/wardrobe/coroner_wardrobe,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "medical department wardrobe supply crate"
 
@@ -212,6 +249,9 @@
 	contains = list(/obj/item/vending_refill/wardrobe/robo_wardrobe,
 					/obj/item/vending_refill/wardrobe/gene_wardrobe,
 					/obj/item/vending_refill/wardrobe/science_wardrobe,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "science department wardrobe supply crate"
 
@@ -223,5 +263,8 @@
 	contains = list(/obj/item/vending_refill/wardrobe/sec_wardrobe,
 					/obj/item/vending_refill/wardrobe/det_wardrobe,
 					/obj/item/vending_refill/wardrobe/law_wardrobe,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor,
+	/obj/item/circuitboard/machine/vendor
 				)
 	crate_name = "security department supply crate"
