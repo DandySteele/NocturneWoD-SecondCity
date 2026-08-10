@@ -327,5 +327,5 @@
 	name = "Pest-B-Gon Jukebox"
 	desc = "A classic jukebox, perfect for setting the mood in your establishment!"
 	cost = CARGO_CRATE_VALUE * 20
-	contains = list(/obj/machinery/sound/jukebox)
+	contains = list(/obj/machinery/jukebox)
 	crate_name = "jukebox crate"
