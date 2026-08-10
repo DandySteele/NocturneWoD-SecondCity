@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
-import { Dropdown, Flex, Stack } from 'tgui-core/components'; // NOCTURNE EDIT - ORIGINAL: import { Button, Stack } from 'tgui-core/components';
+import { Button, Dropdown, Flex, Stack } from 'tgui-core/components'; // DARKPACK EDIT CHANGE
 import { exhaustiveCheck } from 'tgui-core/exhaustive';
 
 import { PageButton } from '../components/PageButton';
@@ -37,49 +37,47 @@ function CharacterProfiles(props: ProfileProps) {
   const { activeSlot, onClick, profiles } = props;
   // NOCTURNE EDIT - DROPDOWN MENU
 
-  /* // ORIGINAL
-  return (
-    <Stack justify="center" wrap>
-      {profiles.map((profile, slot) => (
-        <Stack.Item key={slot} mb={1}>
-          <Button
-            selected={slot === activeSlot}
-            onClick={() => {
+  // DARKPACK EDIT CHANGE START
+  if (profiles.length <= 5)
+    // TG Version
+    return (
+      <Stack justify="center" wrap>
+        {profiles.map((profile, slot) => (
+          <Stack.Item key={slot} mb={1}>
+            <Button
+              selected={slot === activeSlot}
+              onClick={() => {
+                onClick(slot);
+              }}
+              fluid
+            >
+              {profile ?? 'New Character'}
+            </Button>
+          </Stack.Item>
+        ))}
+      </Stack>
+    );
+  else
+    // Expanded version if we have way 2 many slots.
+    return (
+      <Flex align="center" justify="center">
+        <Flex.Item width="25%">
+          <Dropdown
+            width="100%"
+            selected={activeSlot as unknown as string}
+            displayText={profiles[activeSlot]}
+            options={profiles.map((profile, slot) => ({
+              value: slot,
+              displayText: profile ?? 'New Character',
+            }))}
+            onSelected={(slot) => {
               onClick(slot);
             }}
-            fluid
-          >
-            {profile ?? 'New Character'}
-          </Button>
-        </Stack.Item>
-      ))}
-    </Stack>
-  );
-  */
-
-  return (
-    <Flex
-      align="center"
-      justify="center"
-    >
-      <Flex.Item width="25%">
-        <Dropdown
-          width="100%"
-          selected={activeSlot as unknown as string}
-          displayText={profiles[activeSlot]}
-          options={profiles.map((profile, slot) => ({
-            value: slot,
-            displayText: profile ?? 'New Character',
-          }))}
-          onSelected={(slot) => {
-            onClick(slot);
-          }}
-        />
-      </Flex.Item>
-    </Flex>
-  );
-
-  // NOCTURNE EDIT END
+          />
+        </Flex.Item>
+      </Flex>
+    );
+  // DARKPACK EDIT CHANGE END
 }
 
 export function CharacterPreferenceWindow(props) {
@@ -181,7 +179,7 @@ export function CharacterPreferenceWindow(props) {
           </Stack.Item>
 
           {
-          // DARKPACK EDIT ADD START - stats / disciplines
+            // DARKPACK EDIT ADD START - stats / disciplines
           }
           <Stack.Item grow>
             <PageButton
@@ -206,7 +204,7 @@ export function CharacterPreferenceWindow(props) {
             </Stack.Item>
           )}
           {
-          // DARKPACK EDIT END
+            // DARKPACK EDIT END
           }
 
           <Stack.Item grow>
@@ -233,8 +231,7 @@ export function CharacterPreferenceWindow(props) {
             </PageButton>
           </Stack.Item>
 
-          {
-            /* DARKPACK EDIT REMOVAL - (We dont have antags and this is useless atm)
+          {/* DARKPACK EDIT REMOVAL - (We dont have antags and this is useless atm)
           <Stack.Item grow>
             <PageButton
               currentPage={currentPage}
@@ -244,11 +241,10 @@ export function CharacterPreferenceWindow(props) {
               Antagonists
             </PageButton>
           </Stack.Item>
-            */
-          }
+            */}
 
           {
-          // DARKPACK EDIT ADD START - Merits
+            // DARKPACK EDIT ADD START - Merits
           }
           <Stack.Item grow>
             <PageButton
@@ -260,7 +256,7 @@ export function CharacterPreferenceWindow(props) {
             </PageButton>
           </Stack.Item>
           {
-          // DARKPACK EDIT ADD END
+            // DARKPACK EDIT ADD END
           }
         </Stack>
       </Stack.Item>

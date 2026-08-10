@@ -6,7 +6,7 @@
 
 	var/headshot = ""
 	var/obscured = FALSE
-	var/show_flavor_text_when_masked = client?.prefs.read_preference(/datum/preference/toggle/show_flavor_text_when_masked)
+	var/show_flavor_text_when_masked = client?.prefs.read_preference(/datum/preference/toggle/show_identity_when_masked)
 
 	if(ishuman(src))
 		var/mob/living/carbon/human/holder_human = src
